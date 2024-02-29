@@ -1,0 +1,439 @@
+Clave|Revista|Color|Tipo de licencia|Acceso|Autoarchivo|Versiones de autoarchivo
+1|Cuadernos.info|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+2|ECONOMIA CREATIVA|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Post-print (versión editorial)
+3|Revista Información Científica|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+4|Trabalho, Educação e Saúde|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+5|Revista Observatório|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+6|Derecho PUCP|Verde|Atribución - CC BY|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+7|Administração Pública e Gestão Social|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+8|Administração Pública e Gestão Social|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+9|Revista ICONO 14 de Comunicación y Tecnologías emergentes|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+10|Revista de Ciencias Sociales y Humanas|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+11|Urvio, Revista Latinoamericana de Estudios de Seguridad|Azul|Atribución-Sin Derivadas - CC BY-ND|Gratuito|Sí|Post-print (versión editorial)
+12|Revista Digital de Derecho Administrativo|Verde|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial)
+13|Laplage em Revista|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión corregida del autor)
+14|International Journal of Professional Business Review|Verde|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+15|El Ornitorrinco Tachado|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+16|Diálogos sobre educación. Temas actuales en investigación educativa|Blanca|Ninguna|Gratuito|No|Desconocido
+17|Revista Alergia México|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+18|Anuario electrónico de estudios en Comunicación Social "Disertaciones"|Verde|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial)
+19|Educação e Pesquisa|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+21|Revista de Ciencias Sociales|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito online - suscripción versión impresa|Sí|Post-print (versión editorial), Versión final
+22|Problemas del Desarrollo. Revista Latinoamericana de Economía|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+23|Revista Facultad de Ingeneria|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor), Publicado
+24|Revista UIS Ingenierías|Verde|Atribución-Sin Derivadas - CC BY-ND|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+25|Agronomía Mesoamericana|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+26|REVISTA CATARINENSE DA CIÊNCIA CONTÁBIL|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+27|En-Contexto Revista de Investigación en Administración, Contabilidad, Economía y Sociedad|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+28|Revista INVI|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito online - suscripción versión impresa|Sí|Post-print (versión editorial)
+29|Revista Argentina de Radiología|Blanca|Ninguna|Gratuito online - suscripción versión impresa|No|Desconocido
+30|HiSTOReLo. Revista de Historia Regional y Local|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+31|revista Internacional de Contaminación Ambiental|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+32|Boletim Goiano de Geografia|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+33|Cadernos Metrópole|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+34|Acta Paulista de Enfermagem|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+35|Estudios sobre las Culturas Contemporáneas|Blanca|Ninguna|Gratuito|No|Desconocido
+36|Huitzil, Revista Mexicana de Ornitología|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+37|Galáxia |Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+38|Colombia Forestal|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+39|Uniciencia|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+40|Revista Peruana de Ginecología y Obstetricia|Azul|Ninguna|Gratuito|Sí|Post-print (versión editorial)
+41|REHMLAC+. Revista de Estudios Históricos de la Masonería Latinoamericana y Caribeña|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+42|Colombia Médica|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+43|Retos: Revista de Ciencias de la Administración y Economía|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+44|marcoELE, REVISTA DE DIDÁCTICA ELE|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+45|PASOS Revista de Turismo y Patrimonio Cultural|Azul|Atribución-Sin Derivadas - CC BY-ND|Gratuito|Sí|Post-print (versión editorial)
+46|Revista Científica Compendium|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión corregida del autor)
+47|RICYDE. Revista Internacional de Ciencias del Deporte|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+48|Revista Eureka sobre Enseñanza y Divulgación de las Ciencias|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|versión publicada
+49|Revista Venezolana de Oncología|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+50|Ideas y Valores - Revista Colombiana de Filosofía|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito online - suscripción versión impresa|Sí|Desconocido
+51|Acta Biológica Colombiana|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+52|Revista de Osteoporosis y Metabolismo Mineral|Blanca|Ninguna|Gratuito|No|Desconocido
+53|REMHU - Revista Interdisciplinar da Mobilidade Humana |Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+54|Revista de Estudios Sociales|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito online - suscripción versión impresa|Sí|Desconocido
+55|REICE. Revista Iberoamericana sobre Calidad, Eficacia y Cambio en Educación |Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+56|Revista de Economía Institucional|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+57|LiminaR. Estudios Sociales y Humanísticos|Azul|Atribución-Sin Derivadas - CC BY-ND|Gratuito|Sí|Desconocido
+58|Investigación y Educación en Enfermería|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+59|RIDE REVISTA IBEROAMERICANA PARA LA INVESTIGACIÓN Y EL DESARROLLO EDUCATIVO|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+60|apunts. Educación Física y Deportes|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión corregida del autor)
+61|Profile: Issues in Teachers' Professional Development|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+62|Espiral Estudios sobre Estado y sociedad|Blanca|Ninguna|Gratuito|No|Desconocido
+63|Cuadernos de Antropología Social|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|versión final publicada
+64|Latinoamérica.Revista de estudios latinoamericanos|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+65|Revista Pilquen Sección Ciencias Sociales|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+66|História: Debates e Tendências|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+68|Innovar|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+69|Atmósfera|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+70|REvista de la Sociedad Entomológica Argentina|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+71|Revista de Psicología|Azul|Atribución - CC BY|Gratuito online - suscripción versión impresa|Sí|Desconocido
+72|Journal of Pharmacy & Pharmacognosy Research|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión corregida del autor)
+73|Papeles del Psicólogo / Psychologist Papers|Blanca|Ninguna|Gratuito|No|Desconocido
+74|Aposta. Revista de Ciencias Sociales|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+75|Duazary|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+76|terra. Nueva Etapa|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+77|Revista Brasileira de Sociologia do Direito|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+78|Tabula Rasa|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+79|Revista Venezolana de Oncología|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+80|VIRTUAL BRAZILIAN ANTHROPOLOGY|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+81|Revista Brasileira de Estudos da Presença|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+82|Revista Tecnura|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+83|REVISTA PEDIATRÍA ATENCIÓN PRIMARIA|Blanca|Ninguna|Gratuito|No|Desconocido
+84|@tic revista d'innovació educativa|Azul|Atribución-Sin Derivadas - CC BY-ND|Gratuito|Sí|Desconocido
+85|Revista de Derecho Privado|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+86|Organizações & Sociedade|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+87|ReCIBE, revista electrónica de Computación, Informática, Biómedica y Electrónic|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+88|Odontoestomatología|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+89|Revista de Estudios de Género, La Ventana|Blanca|Ninguna|Gratuito|No|Desconocido
+90|Estudios de Cultura Maya|Azul|Atribución-No Comercial - CC BY-NC|Gratuito online - suscripción versión impresa|Sí|Desconocido
+91|OPERA|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+92|Estudos Ibero-Americanos|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+93|Estudios Sociales. Revista de Alimentación Contemporánea y Desarrollo Regional|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión corregida del autor)
+94|UNED Research Journal / Cuadernos de Investigación UNED|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+95|Revista Historia Caribe|Azul|Atribución-No Comercial - CC BY-NC|Gratuito online - suscripción versión impresa|Sí|Desconocido
+96|Cuadernos de Bioética|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+97|Revista Gestão Universitária na América Latina|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+98|Anagramas, rumbos y sentidos de la comunicación|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión corregida del autor)
+99|Revista Derecho del Estado|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+100|Intersticios Sociales|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+101|Cuadernos Latinoamericanos de Administración|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+102|Quivera Revista de Estudios Territoriales|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+103|Revista Ingenius|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión corregida del autor)
+104|Sophia: Colección de Filosofía de la Educación|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+105|REVISTA CAATINGA|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+106|Revista Mexicana de Economía y Finanzas Nueva Época REMEF (The Mexican Journal of Economics and Finance)|Azul|Atribución-No Comercial - CC BY-NC|Gratuito online - suscripción versión impresa|Sí|Desconocido
+107|Revista Administração em Diálogo|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+108|Colombia Internacional|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+109|HISTORIA CRÍTICA|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito online - suscripción versión impresa|Sí|Desconocido
+110|Apertura|Verde|Ninguna|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+111|Espacios en Blanco-Revista de Educación|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+112|ANDEAN GEOLOGY|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+113|Revista Latinoamericana de Investigación en Matemática Educativa|Azul|Atribución-No Comercial - CC BY-NC|Gratuito online - suscripción versión impresa|Sí|Post-print (versión corregida del autor)
+114|Revista Iberoamericana de Estudios Municipales|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+116|Pensar en Movimiento: Revista de Ciencias del Ejercicio y la Salud|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+117|Lecturas de Economía|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Desconocido
+118|Administração: Ensino e Pesquisa|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+119|Ingeniería|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+120|Aldea Mundo. Revista sobre Fronteras e Integración|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+121|Revista O Social em Questão|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+122|Perífrasis. Revista de Literatura, Teoría y Crítica|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+123|Biota Colombiana|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión corregida del autor)
+124|Sincronía|Blanca|Ninguna|Gratuito|No|Desconocido
+125|Cuadernos de Administración|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión corregida del autor)
+126|Mundo agrario|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+127|Relaciones Estudios de Historia y Sociedad|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+128|Revista Iberoamericana de Tecnología Postcosecha|Blanca|Ninguna|Gratuito|No|Desconocido
+129|La Granja, Revista de Ciencias de la Vida|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+130|Convergencia Revista de Ciencias Sociales|Azul|Atribución-Sin Derivadas - CC BY-ND|Gratuito|Sí|Desconocido
+131|Científica|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+132|Revista Latinoamericana de Estudios Educativos|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+133|Economía teoría y práctica|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+134|International Journal of Psychological Research|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+135|Estudios Fronterizos|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+136|Memorias. Revista digital de Historia y Arqueología desde el Caribe colombiano|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+137|CIENCIA ergo-sum|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+139|Revista Colombiana de Gastroenterología|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+140|Pharmacy Practice|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+141|Tla-meaua, Revista de Ciencias Sociales |Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+142|Revista Estudios Socio-Jurídicos|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+143|Hallazgos|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Desconocido
+144|Análisis. Revista Colombiana de Humanidades|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Desconocido
+145|Dyna|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+146|CIRUGIA PLASTICA IBERO-LATINOAMERICANA|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito online - suscripción versión impresa|Sí|Desconocido
+147|ACDI - Anuario Colombiano de Derecho Internacional|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+148|Boletín de Ciencias de la Tierra|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+149|Ciencias Psicológicas|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+150|Boletim de Ciências Geodésicas|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+151|Revista Geográfica de América Central|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+152|Revista Historia de la Educación Latinaomericana|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+153|Revista de la Universidad Industrial de Santander. Salud|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+154|Revista Interamericana de Bibliotecología|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito online - suscripción versión impresa|Sí|Post-print (versión editorial)
+155|Diversitas: perspectivas en psicología|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Desconocido
+156|EduSol|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+157|Revista Chilena de Literatura|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito online - suscripción versión impresa|Sí|Desconocido
+158|Acta Scientiarum Education|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+159|Revista Ingenierías Universidad de Medellín|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+160|Revista Prâksis|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+161|Revista Colombiana de Bioética|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+162|CS|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+163|Espacios Públicos|Blanca|Ninguna|Hibrido|No|Desconocido
+164|Revista de Ciencias Sociales|Blanca|Ninguna|Gratuito|No|Desconocido
+166|Revista Colombiana de Química|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+167|Iatreia|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión corregida del autor)
+168|Revista nuestrAmérica|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+169|Revista Interamericana de Psicologia/Interamerican Journal of Psychology|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+170|Sophia|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+171|Contabilidad y Negocios|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+172|Revista Colombiana de Ciencias Sociales|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+173|Revista Clínica de Periodoncia, Implantología y Rehabilitación Oral|Blanca|Ninguna|Gratuito|No|Desconocido
+174|Revista humanidades|Azul|Ninguna|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+175|Revista Colombiana de Obstetricia y Ginecología|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+176|International Journal of Developmental and Educational Psychology (Revista INFAD de Psicología)|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+177|Boletim do Museu Paraense Emílio Goeldi. Ciências Humanas|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+179|Desenvolvimento em Questão|Azul|Atribución - CC BY|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+180|Procesos Históricos.Revista de Historia y Ciencias Sociales|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+181|Geosaberes: revista de Estudos Geoeducacionais|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+182|Revista Latinoamericana de Estudios sobre Cuerpos, Emociones y Sociedad|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+184|EUROPEAN JOURNAL OF EDUCATION AND PSYCHOLOGY|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+185|Psicothema|Blanca|Ninguna|Gratuito|No|Desconocido
+186|Archivos de Medicina (Col)|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Versión publicada
+187|Revista Colombiana de Biotecnología|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+188|Papeles de Población|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+189|Perfiles Latinoamericanos|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión corregida del autor)
+190|Production|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+191|Redes|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+192|Trends in Psychology/Temas em Psicologia|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+193|El oído pensante|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+194|Revista Bitácora Urbano Territorial |Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+195|Anthropologica del Departamento de Ciencias Sociales|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+196|Praxis & Saber|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+197|Revista Venezolana de Endocrinología y Metabolismo|Blanca|Ninguna|Gratuito|No|Desconocido
+198|Revista Ciencias de la Salud|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+199|Revista Electrónica Educare|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+200|Historia Y MEMORIA|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+201|Revista de Bioética y Derecho|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+202|Revista Avances en Psicología Latinoamericana|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+203|Varia Historia|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+204|Avances en Química|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito online - suscripción versión impresa|Sí|Desconocido
+205|Ingeniería y Competitividad|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+206|Revista de Investigación Agraria y Ambiental|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+207|Salud Colectiva|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+208|Quiroga. Revista de patrimonio Iberoamericano|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+209|Ciencia y Agricultura|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+210|Revista Scientific|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+211|Ibérica. Revista de la Asociación Europea de Lenguas para Fines Específicos.|Blanca|Ninguna|Gratuito online - suscripción versión impresa|No|Desconocido
+212|Di@logus|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+213|Revista Geológica de América Central|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Desconocido
+214|Revista Jurídica Direito & Paz|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión corregida del autor)
+215|Revista Alcance|Blanca|Ninguna|Gratuito|No|Desconocido
+216|Castilla. Estudios de Literatura|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+217|Cadernos de Pós-graduação|Azul|Ninguna|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+218|Oculum Ensaios|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+219|Direito e Justiça: Reflexões Sociojurídicas|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión corregida del autor)
+220|Direitos Culturais|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+221|Ciencias Administrativas|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí| Version corregida del autor y adaptada teniendo en cuenta las normas de la revista Ciencias Administrativas
+222|GESTO: Revista de Gestão Estratégica de Organizações|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Desconocido
+223|Revista Arbitrada Venezolana del Núcleo Costa Oriental del Lago Impacto Científico|Blanca|Ninguna|Gratuito|No|Desconocido
+225|Tópicos, Revista de Filosofía |Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Desconocido
+226|Revista Brasileira de Orientação Profissional (RBOP)|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+227|Perseitas|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+228|Revista Tempo e Argumento|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+229|Brazilian Journal of Otorhinolaryngology|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+230|Revista Gestão e Sociedade - GeS|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+231|Revista Facultad Nacional de Agronomía Medellín|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+232|Revista Arbitrada Interdisciplinaria Koinonía|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+233|Sinéctica, revista electrónica de educación|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+234|Todas as Letras - Revista de Língua e Literatura|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+235|Ensino de Ciências e Tecnologia em Revista|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+236|Estudios del Desarrollo Social: Cuba y América Latina|Verde|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión corregida del autor)
+237|Nóesis. Revista de Ciencias Sociales y Humanidades|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+238|CES Psicología|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+239|Estudios Gerenciales|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+240|Revista MVZ Córdoba|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+241|Encuentros. Revista de Ciencias Humanas, Teoría Social y Pensamiento Crítico|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+242|Griot : Revista de Filosofia|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+243|Paakat: Revista de Tecnología y Sociedad|Blanca|Ninguna|Gratuito|No|Desconocido
+244|Revista Vianna Sapiens |Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión corregida del autor)
+245|Revista Mexicana de Ingeniería Biomédica|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+246|Utopia y Praxis Latinoamericana|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+247|Zona Próxima|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+248|CienciaUAT|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Desconocido
+249|Revista Educação em Questão|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión corregida del autor)
+251|Revisa de la Asociación Latinoamericana de Control de Calidad, Patología y Recuperación de la Construcción|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+252|Revista de Arquitectura|Verde|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+253|Revista Colombiana de Cirugía|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+254|Revista de Economía del Rosario|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+255|CPU-e, Revista de Investigación Educativa|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+256|Sociologias|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+257|Revista Integración, temas de matemáticas|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+258|Anclajes|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión corregida del autor)
+259|Estudios Sociológicos|Verde|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+260|Análisis Económico|Blanca|Ninguna|Gratuito|No|Desconocido
+261|Quinto Sol. Revista de Historia|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+262|Estudos de Literatura Brasileira Contemporânea|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+263|Periferia|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+264|Sociológica (México)|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+265|Revista Latinoamericana de Ciencias Sociales, Niñez y Juventud|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+266|REVISTA ESTOMATOLOGIA|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión corregida del autor)
+267|Barataria. Revista Castellano-Manchega de Ciencias Sociales|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+268|Revista Lingüistica y literatura|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+269|Em Questão|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+270|Revista Interuniversitaria de Formación del Profesorado|Azul|Ninguna|Gratuito online - suscripción versión impresa|Sí|Post-print (versión editorial)
+271|Estudios de Economía|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito online - suscripción versión impresa|Sí|Post-print (versión editorial)
+272| SMAD. Revista Eletrônica Saúde Mental Álcool e Drogas |Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+273|Boletín de la Sociedad Geológica MExicana|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+274|Revista Mad: Revista del Magíster en Análisis Sistémico aplicado a la Sociedad|Verde|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+275|Revista Internacional de Medicina y Ciencias de la Actividad Física y el Deporte|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+276|POSTData. Revista de Reflexión y Análisis Político|Blanca|Ninguna|Gratuito|No|Desconocido
+277|Ilha do Desterro|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+278|Estudos de lingüística galega|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+279|Nueva Antropología|Azul|Ninguna|Gratuito|Sí|Desconocido
+280|RIED. Revista Iberoamericana de Educación a Distancia|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+281|Urbe. Revista Brasileira de Gestão Urbana|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+282|Secuencia. Revista de historia y ciencias sociales|Azul|Atribución-No Comercial - CC BY-NC|Gratuito online - suscripción versión impresa|Sí|Desconocido
+283|Revista Escuela de Administración de Negocios|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Versión final publicada
+284|Revista Latinoamericana de Psicología|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+285|Acta Medica Colombiana|Blanca|Ninguna|Gratuito|No|Desconocido
+286|Revista Fronteras de la Historia|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+287|RED Revista de Educación a Distancia|Verde|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+288|AquaTIC|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+289|Acción Psicológica|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+290|Revista de Investigaciones Agropecuarias -RIA-|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+292|Sexualidad, Salud y Sociedad - Revista Latinoamericana|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+293|Onomázein|Verde|Atribución-Sin Derivadas - CC BY-ND|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+294|Psicologia Clínica|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+295|Ingeniería Revista Académica de la Facultad de Ingeniería Universidad Autónoma de Yucatán|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+296|Trabajo y Sociedad|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+297|Revista Mexicana de Ingeniería Química|Blanca|Ninguna|Gratuito|No|Desconocido
+298|Jornal de Pediatria|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+299|Revista Mexicana de Astronomía y Astrofísica|Blanca|Ninguna|Gratuito|No|Desconocido
+301|Regae - Revista de Gestão e Avaliação Educacional|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión corregida del autor)
+302|Revista Mexicana de Ciencias Pecuarias|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+303|Archivos Venezolanos de Farmacología y Terapéutica|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+304|Ciência Rural|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+305|Revista Argentina de Ciencias del Comportamiento|Blanca|Ninguna|Gratuito|No|Desconocido
+306|Revista de El Colegio de San Luis|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito online - suscripción versión impresa|Sí|Desconocido
+308|Revista Clínica de Medicina de Familia|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+309|Stomatos|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+310|Revista Iberoamericana de Diagnóstico y Evaluación - e Avaliação Psicológica|Blanca|Ninguna|Gratuito|No|Desconocido
+312|REVISTA PSICOLOGIA: CIÊNCIA E PROFISSÃO|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+314|Revista "Panorama. Cuba y Salud"|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+315|Tecnología Química|Azul|Atribución-No Comercial - CC BY-NC|Gratuito online - suscripción versión impresa|Sí|Desconocido
+316|Revista chilena de investigaciones estéticas, Aisthesis|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+317|Revista electrónica de investigación educativa|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+318|Revista Interamericana de Educación de Adultos|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+319|INSUFICIENCIA CARDIACA|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+320|QUÓRUM ACADÉMICO|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión corregida del autor)
+321|Ecosistemas y Recursos Agropecuarios|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+322|Revista Mediterránea de Comunicación / Mediterranean Journal of Communication|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Post-print (versión editorial)
+323|European Research on Management and Business Economics |Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Pre-print (versión sin evaluar )
+324|Education in the Knowledge Society|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+326|Tempo|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+327|INTERIN - Revista do Programa de Pós-Graduação em Comunicação e Linguagens/UTP|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión corregida del autor)
+328|Revista de Biologia Marina y Oceanografía|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+329|RICSH REVISTA IBEROAMERICANA DE LAS CIENCIAS SOCIALES Y HUMANÍSTICAS|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+330|Archivos Venezolanos de Farmacología y Terapéutica|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+331|Semina: Ciências Agrárias|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+333|Alteridades|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+334|Alea. Estudos Neolatinos|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+335|Revista Brasileira de Ciências Agrárias - Brazilian Journal of Agricultural Sciences|Blanca|Ninguna|Gratuito|No|Desconocido
+336|International Journal of Clinical and Health Psychology|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+337|Revista Prisma Social|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+338|Bragantia|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+339|Revista de Inovação e Sustentabilidade|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+340|Revista Mexicana de Ciencias Agrícolas|Azul|Atribución-No Comercial - CC BY-NC|Gratuito online - suscripción versión impresa|Sí|Post-print (versión editorial)
+341|Teoría y Praxis|Blanca|Ninguna|Gratuito|No|Desconocido
+342|Revista Argentina de Cardiología|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Desconocido
+343|ModaPalavra e-periódico|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+344|Revista Brasileira em Promoção da Saúde|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+345|TecnoLógicas|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+346|Anuario de Historia de la Iglesia|Azul|Atribución-Sin Derivadas - CC BY-ND|Gratuito despues de un embargo|Sí|Post-print (versión editorial)
+347|e-balonmano.com: Revista de Ciencias del Deporte|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+348|Latin American Journal of Sedimentology and Basin Analysis|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+349|Ánfora|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Post-print (versión editorial)
+350|Cuadernos Inter.c.a.mbio sobre Centroamérica y el Caribe|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+351|Ecología Aplicada|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+352|PESQUISA BRASILEIRA EM ODONTOPEDIATRIA E CLINICA INTEGRADA|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+353|Revista História da Educação - ASPHE|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+354|Revista Portuguesa de Estudos Regionais|Blanca|Ninguna|Gratuito online - suscripción versión impresa|No|Desconocido
+355|Educación XX1|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+357|Perspectivas|Azul|Ninguna|Gratuito online - suscripción versión impresa|Sí|Post-print (versión corregida del autor)
+358|Revista de Filosofía Diánoia|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito online - suscripción versión impresa|Sí|Desconocido
+359|Revista Latina de Comunicación Social|Azul|Atribución-Sin Derivadas - CC BY-ND|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+360|Biomédica: revista del Instituto Nacional de Salud|Blanca|Ninguna|Gratuito|No|Desconocido
+361|Horizonte Médico (Lima)|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+362|Educação (UFSM)|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+363|RUNA, archivo para las ciencias del hombre|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+364|Frontera Norte |Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito online - suscripción versión impresa|Sí|Desconocido
+365|Profesorado.Revista de Currículum y Formación del Profesorado|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+366|Historia Social y de la Educación|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+367|Revista Archivo Médico de Camagüey|Verde|Atribución - CC BY|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+368|Revista Colombiana de Estadística|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+369|Acta Gastroenterológica Latinoamericana|Blanca|Ninguna|Gratuito|No|Desconocido
+370|INTERNATIONAL JOURNAL OF PSYCHOLOGY & PSYCHOLOGICAL THERAPY|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito online - suscripción versión impresa|Sí|Post-print (versión editorial)
+371|Cinta de Moebio. Revista de Epistemología de Ciencias Sociales|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+372| Psicología, Conocimiento y Sociedad|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+373|Revista Brasileira de Ciências Sociais|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+375|Revista Geográfica Venezolana|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+376|Independent Journal of Management & production|Verde|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+377|Palabra Clave. Revista de Comunicación|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+378|Gestión y Análisis de Políticas Públicas|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+379|Hipogrifo. Revista de literatura y cultura del Siglo de Oro|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+380|Revista de Paz y Conflictos|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+381|Eclética Química Journal|Azul|Atribución - CC BY|Gratuito|Sí|Post-publicación.
+383|Trashumante. Revista Americana de Historia Social|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+385|Sapienza Organizacional|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial)
+386|REVISTA VISIÓN GERENCIAL |Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+388|Electronic Journal of Research in Educational Psychology|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+389|MHSalud: Revista en Ciencias del Movimiento Humano y Salud |Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+390|Telos: Revista de Estudios Interdisciplinarios en Ciencias Sociales|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+391|Procesamiento del Lenguaje Natural|Blanca|Ninguna|Gratuito|No|Desconocido
+392|Boletín de arte|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+393|Educação em Revista - UFMG|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+397|Paradoxos|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+398|Revista Ciencias Holguin|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+399|Aquichan|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+400|Antípoda. Revista de Antropología y Arqueología|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+401|Geologica Acta|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito online - suscripción versión impresa|Sí|Versión de publicación
+402|COMUNI@CCION: Revista de investigación en comunicación y desarrollo |Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+404|Estudos de Psicologia|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+405|Revista Latino-Americana de Enfermagem|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+406|Revista Ciencias Técnicas Agropecuarias|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+407|Educação Unisinos|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+408|Información, cultura y sociedad|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito online - suscripción versión impresa|Sí|Post-print (versión editorial)
+410|Revista Mexicana de Sociologìa|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+411|Revista Mexicana de Opinión Pública|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+412|Enfermería Universitaria|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito online - suscripción versión impresa|Sí|Post-print (versión editorial)
+413|Reflexiones|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+414|Revista de Administração FACES Journal|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+415|Revista Brasileira de Gestão e Inovação (Brazilian Journal of Management & Innovation)|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+418|Escritos de Psicología - Psychological Writings|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+419|Revista Enfoque: Reflexão Contábil|Azul|Atribución - CC BY|Gratuito|Sí|Pre-print (versión sin evaluar )
+420|Investigación y Ciencia de la Universidad Autónoma de Aguascalientes|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+421|Revista Facultad Nacional de Salud Pública|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Versión final publicada
+422|Historia|Blanca|Ninguna|Gratuito online - suscripción versión impresa|No|Desconocido
+424|RELIEVE - Revista Electrónica de Investigación y Evaluación Educativa|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+425|Agronomia Costarricense|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito online - suscripción versión impresa|Sí|Post-print (versión editorial)
+426|Revista de Investigación y Cultura UCV HACER|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+427|Revista Brasileira de Ciências do Esporte|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+428|Textos & Contextos (Porto Alegre)|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+429|Revista Brasileira de Política Internacional|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+430|ICIDCA sobre los derivados de la caña de azúcar|Blanca|Ninguna|Gratuito|No|Desconocido
+431|Cuadernos Geográficos de la Universidad de Granada|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Versión publicada
+432|revista Ciencia e Ingeniería|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial), Post-print (versión corregida del autor)
+433|SOCIEDADE E ESTADO|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+434|Motricidade|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+435|Medicina UPB|Verde|Atribución - CC BY|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+436|Escola Anna Nery Revista de Enfermagem|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+437|PSICOGENTE|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión corregida del autor)
+438|Revista Direito e Práxis|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Post-print (versión corregida del autor)
+439|Liberabit. Revista Peruana de Psicología|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|published version
+440|Íconos, Revista de Ciencias Sociales|Azul|Atribución-Sin Derivadas - CC BY-ND|Gratuito online - suscripción versión impresa|Sí|Desconocido
+441|Therya|Verde|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+443|Praxis educativa|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión editorial)
+445|ATENAS. Revista Científico Pedagógica|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión corregida del autor)
+446|Revista Cubana de Química|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+447|Revista Facultad de Ingeniería, Universidad de Antioquia |Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito online - suscripción versión impresa|Sí|Post-print (versión editorial)
+448|Cuicuilco Revista de Ciencias Antropológicas|Blanca|Ninguna|Gratuito|No|Desconocido
+449|ENTRAMADO|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+450|methaodos.revista de ciencias sociales|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Post-print (versión corregida del autor)
+451|Revista Médica del Instituto Mexicano del Seguro Social|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Desconocido
+452|TURISMO: VISÃO E AÇÃO|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+453|Ciências Sociais Unisinos|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+454|Revista de Investigaciones Políticas y Sociológicas|Blanca|Ninguna|Gratuito|No|Desconocido
+455|Población & Sociedad. Revista de Estudios Sociales|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión corregida del autor)
+456|REVISTA DE LA ASOCIACIÓN ESPAÑOLA DE NEUROPSIQUIATRÍA|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito online - suscripción versión impresa|Sí|Desconocido
+457|Revista Finanzas y Política Económica|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+458|Revista Científica General José María Córdova|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión editorial)
+459|Revista de Administração da Universidade Federal de Santa Maria|Azul|Atribución-No Comercial - CC BY-NC|Gratuito|Sí|Desconocido
+461|Remark - Revista Brasileira de Marketing|Azul|Atribución-Compartir Igual - CC BY-SA|Gratuito|Sí|Desconocido
+462|e-l@tina. Revista electrónica de estudios latinoamericanos|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+463|Revista de Saúde Pública|Azul|Atribución - CC BY|Gratuito|Sí|Desconocido
+464|Exacta|Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Desconocido
+465|Boletín del Instituto de Historia Argentina y Americana "Dr. Emilio Ravignani"|Azul|Atribución-No Comercial - CC BY-NC|Gratuito online - suscripción versión impresa|Sí|Versión final publicada
+468|Revista de Investigación Educativa|Verde|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Pre-print (versión sin evaluar ), Post-print (versión editorial), Post-print (versión corregida del autor)
+469|Cultivos Tropicales |Azul|Atribución-No Comercial-Compartir Igual - CC BY-NC-SA|Gratuito|Sí|Post-print (versión corregida del autor)
+470|Revista Educación|Azul|Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND|Gratuito|Sí|Post-print (versión corregida del autor)
+471|Innovation & Management Review|Azul|Atribución - CC BY|Gratuito|Sí|Post-print (versión editorial)
+472|INTERCIENCIA - Revista de Ciencia y Tecnología de las Américas|Blanca|Ninguna|Gratuito online - suscripción versión impresa|No|Desconocido

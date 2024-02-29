@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	email = angel_apineda@hotmail.com
+	name = la2p
+[remote "origin"]
+	url = https://github.com/la2p/proyectoAura.git
+	fetch = +refs/heads/*:refs/remotes/origin/*

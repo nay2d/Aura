@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html ng-app="auraApp">
+<head>
+    <title>¿Quiere incluir su revista?</title>
+    <link rel="shortcut icon" href="resources/media/miniaura.ico" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="resources/css/header-footer.css">
+    <link rel="stylesheet" href="resources/css/pie-ameli.css">
+    <link rel="stylesheet" href="resources/css/auraCSS.css" type="text/css">
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <script src="resources/js/jquery-slim.min.js" ></script>
+    <script src="resources/js/popper.min.js" ></script>
+    <script src="resources/js/bootstrap.min.js" ></script>
+    <script src="resources/js/angularJS.js"></script>
+    <script src="resources/js/angularJS-route.js"></script>
+    <script src="resources/js/jquery.min-1.8.js"></script>
+    <script src="resources/js/dirPagination.js"></script>
+    <script src="resources/js/config.js"></script>
+    <script src="resources/js/auraForm.js"></script>
+    <script src="resources/js/validacionForm.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+    .swal-button-container { 
+        font-size: 12pt; 
+    } 
+    </style> 
+
+</head>
+<body ng-controller="auraController" ng-init="obtenerDireccion()">
+    <div class="content">			
+        <div id="header-aura">
+            <div class="header-logo-aura">
+                <a href="index.html">
+                    <img src="resources/media/aura-01.png">
+                </a>
+            </div>
+            <div class="header-ligas">
+                <a href="index.html">
+                    <span>{{t.menu.op1}}</span><!--{{t.menu.op1}}-->
+                </a>
+                <a href="https://aura.amelica.org/aura-estadisticas.html">
+                    <span>{{t.menu.op2}}</span><!--{{t.menu.op2}}-->
+                </a>
+                <a href="https://aura.amelica.org/acerca-de-aura.html">
+                    <span>{{t.menu.op3}}</span><!--{{t.menu.op3}}-->
+                </a>
+                <a href="incluir-revista.html">
+                    <span class="header-option-now">{{t.menu.op4}}</span><!--{{t.menu.op4}}-->
+                </a>
+            </div>
+            <div id="header-idioma">
+                <a id="aLink" style="cursor: pointer;" ng-click="myFunc('en')">EN</a>
+                <a id="aLink" style="cursor: pointer;" ng-click="myFunc('es')">ES</a>
+            </div>
+        </div>
+    </div>
+    <div class="linea-gris-separator"></div>
+    <div id="content-form" style="width: 80%; margin:auto;" ng-init="obtenerPaises()">
+        <div >
+            <h1 style="text-align: center;">{{t.formulario.titulo}}</h1>
+						<p style="text-align: justify;">{{t.formulario.descripcion}}</p>
+						<p style="color: red;">{{t.formulario.obligatorio}}</p>
+        </div>
+        <div style="background: rgb(139, 188, 2); color: white; display: flex; justify-content: center; align-items: center; height: 50px; border-radius: 5px; margin-bottom: 20px;">{{t.informacionRevistas.titulo}}</div>
+        <!--<form class="needs-validation1" novalidate name="formAura" action="guardarDatosPg.php" method="post" style="margin-bottom: 50px" ng-init="traducir();"> original-->
+        <form name="formAura" id="formAura" ng-submit="guardarDatosPg()" method="POST" class="needs-validation1" novalidate style="margin-bottom: 50px" ng-init="traducir();"><!--ng-submit="guardarDatosPg()"-->
+            <div class="form-group">
+                <label for="nombreRevista">{{t.informacionRevistas.nombre}} <span style="color: #d93025;">*</span></label>
+                <input id="nombreRevista" name="nombreRevista" class="form-control" type="text" placeholder="{{t.informacionRevistas.placeRevista}}" required>
+                <div class="invalid-feedback">
+                    Por favor ingrese un dato valido.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="urlRevista">{{t.informacionRevistas.url}} <span style="color: #d93025;">*</span></label>
+                <input id="urlRevista" name="urlRevista" class="form-control" type="url" placeholder="{{t.informacionRevistas.urlejemplo}}" required>
+                <div class="invalid-feedback">Por favor ingrese un dato valido.</div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="pais">{{t.informacionRevistas.pais}}<span style="color: #d93025;">*</span></label>
+                    <select id="pais" name="pais" ng-model="pais" class="form-control" required>  
+                        <option value="">{{t.informacionRevistas.elegir}}</option>  
+                        <option ng-repeat="pais in paisesArray" value="{{pais.cvepais}}">{{pais.nompais}}</option>  
+                   </select>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="exampleInputPassword1">{{t.informacionRevistas.nombreInstitucion}} <span style="color: #d93025;">*</span></label>
+                    <input id="institucion" name="institucion" class="form-control" type='text' ng-disabled="otroInstitucion" ng-keyup='fetchUsers()' ng-click='searchboxClicked($event);' ng-model='searchText' placeholder='Institución' required>
+                    <div id='searchResult' class="list-group">
+                        <a class="list-group-item" ng-click='setValue($index,$event)' ng-repeat="result in searchResult" >
+                          {{ result.nomentint}}
+                        </a>
+                    </div>
+                    <input id="cveInstitucion" name="cveInstitucion" value="{{cveInstitucion}}" style="display: none"> <!--agregue id-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group" ng-if="otroInstitucion" >
+                        <label for="otroNombreInstitucion">{{t.informacionRevistas.nombreOtraInstitucion}}<span style="color: #d93025;">*</span></label>
+                        <input id="otroNombreInstitucion" name="otroNombreInstitucion" class="form-control" type="text" value="" placeholder="Institución" required >
+                        <div class="invalid-feedback">
+                            Por favor ingrese un dato valido.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="otroInstitucion" ng-model="otroInstitucion" ng-click='mostrarOtro($event);'>
+                        <label class="custom-control-label" for="otroInstitucion">{{t.informacionRevistas.otraInstitucion}}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tipoEditorial">{{t.informacionRevistas.tipo}} <span style="color: #d93025;">*</span></label>
+                <select id="tipoEditorial" name="tipoEditorial" class="custom-select" id="tipo-editorial" required>
+                    <option value="">{{t.informacionRevistas.elegir}}</option>
+                    <option value="Universidad/Centro de Investigación">Universidad/Centro de Investigación</option>
+                    <option value="Comercial">Comercial</option>
+                    <option value="Asociación/Sociedad">Asociación/Sociedad</option>
+                    <option value="Museo">Museo</option>
+                    <option value="Fundación">Fundación</option>
+                    <option value="Colegio Profesional">Colegio Profesional</option>
+                    <option value="Real Academia">Real Academia</option>
+                    <option value="Gubernamental">Gubernamental</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="organoExpresion">{{t.informacionRevistas.organo}} </label>
+                <small id="organoExpresion" class="form-text text-muted">{{t.informacionRevistas.organoSmall}}</small>
+                <input id="organoDeExpresion1" name="organoDeExpresion1" class="form-control" type="text" placeholder="" >
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    <label for="issn">ISSN (impreso) </label>
+                    <input id="issnImpreso" name="issnImpreso" class="form-control checkIssn" type="text" placeholder="xxxx-xxxx" required>
+                    <div id="invalid-issn" class="invalid-feedback">
+                        Dato incorrecto por favor verifica tu ISSN ej. 1234-587X
+                    </div>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="issnE">ISSN-e (electrónico) </label>
+                    <input id="issnElectronico" name="issnElectronico" class="form-control checkIssn" type="text" placeholder="xxxx-xxxx" required>
+                    <div id="invalid-issnE" class="invalid-feedback">
+                        Dato incorrecto por favor verifica tu ISSN ej. 1234-587X
+                    </div>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="issnL">ISSN-L</label>
+                    <input id="issnL" name="issnL" class="form-control checkIssn" type="text" placeholder="xxxx-xxxx" required>
+                    <div id="invalid-issnL" class="invalid-feedback">
+                        Dato incorrecto por favor verifica tu ISSN ej. 1234-587X
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="invalid-feedback" for="issn">
+                    Debe ingresar por lo menos un issn
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="acceso">{{t.informacionRevistas.acceso}} <span style="color: #d93025;">*</span></label>
+                    <select id="acceso" name="acceso" class="custom-select" id="select-acceso" required>
+                        <option value="">{{t.informacionRevistas.elegir}}</option>
+                        <option value="Gratuito">Gratuito</option>
+                        <option value="Gratuito después de un embargo">Gratuito después de un embargo</option>
+                        <option value="Restringido a suscriptores">Restringido a suscriptores</option>
+                        <option value="Gratuito online - suscripción versión impresa">Gratuito online - suscripción versión impresa</option>
+                        <option value="Hibrido">Hibrido</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        {{t.informacionRevistas.elegir}}.
+                    </div>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="mesesEmbargo">{{t.informacionRevistas.mesesEmbargo}}</label>
+                    <input id="mesesEmbargo" name="mesesEmbargo" type="number" min="1" pattern="[0-9]+" class="form-control" type="text" placeholder="" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6" ng-init="obtenerCategoria()">
+                    <label for="categoriaRevista">{{t.informacionRevistas.categoria}} <span style="color: #d93025;">*</span></label>
+                    <select id="categoriaRevista" name="categoriaRevista" class="custom-select" id="select-categoria" required ng-model="categoriaRevista" ng-click="categoriaRevistaV($event);">
+                        <option value="">{{t.informacionRevistas.elegir}}</option>
+                        <option ng-repeat="categoria in categorias" value="{{categoria.cveCategoria}}">{{categoria.nomCategoria}}</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        {{t.informacionRevistas.elegir}}.
+                    </div>
+                </div>
+                <div class="form-group col-sm-6" ng-if="mostrarCategoriaOtro">
+                    <label for="categoriaOtro">Otro</label>
+                    <input id="categoriaOtro" name="categoriaOtro" type="text" class="form-control" placeholder="" required>
+                </div>                
+            </div>
+            <div class="form-group">
+                <label for="derechosExplotacion">{{t.informacionRevistas.derechos}}<span style="color: #d93025;">*</label>
+                    <select id="derechosExplotacion" name="derechosExplotacion" class="custom-select" required>
+                        <option value="">{{t.informacionRevistas.elegir}}</option>
+                        <option value="Sí">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="titularDerechos">{{t.informacionRevistas.titularDerechos}} <span style="color: #d93025;">*</span></label>
+                <small id="titularDerechos" class="form-text text-muted">Dentro de la opción Institución se incluye la institución editora, el editor y/o la revista</small>
+                <select name="titularDerechos" class="custom-select" id="select-titular" required>
+                    <option value="">{{t.informacionRevistas.elegir}}</option>
+                    <option value="Autor">Autor</option>
+                    <option value="Institución">Institución</option>
+                </select>
+            </div>
+            <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="ubicacionMencionDerechos">{{t.informacionRevistas.ubicacionDerechos}}</label>
+                <select name="ubicacionMencionDerechos" class="custom-select" id="ubicacionMencionDerechos">
+                    <option value="">{{t.informacionRevistas.elegir}}</option>
+                    <option value="Página de inicio">Página de inicio</option>
+                    <option value="Enlace específico">Enlace específico</option>
+                    <option value="Instrucciones para los autores">Instrucciones para los autores</option>
+                    <option value="En las páginas de créditos">En las páginas de créditos</option>
+                </select>
+            </div>
+                <div class="form-group col-sm-6">
+                    <label for="urlMencionDerechos">{{t.informacionRevistas.urlDerechos}}</label>
+                    <input id="urlMencionDerechos" name="urlMencionDerechos" class="form-control" type="url" placeholder="{{t.informacionRevistas.urlejemplo}}">
+                    <div class="invalid-feedback">
+                        URL no valida.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="licenciaPublicacion">{{t.informacionRevistas.licencia}}<span style="color: #d93025;">*</span></label>
+                    <select id="licenciaPublicacion" name="licenciaPublicacion" class="custom-select" id="select-licencia" required ng-model="licenciaPublicacion" ng-click="licenciaPublicacionV($event);">
+                        <option value="">{{t.informacionRevistas.elegir}}</option>
+                        <option value="Atribución - CC BY">Atribución - CC BY</option>
+                        <option value="Atribución-No Comercial - CC BY-NC">Atribución-No Comercial - CC BY-NC</option>
+                        <option value="Atribución-Compartir Igual - CC BY-SA">Atribución-Compartir Igual - CC BY-SA</option>
+                        <option value="Atribución-Sin Derivadas - CC BY-ND">Atribución-Sin Derivadas - CC BY-ND</option>
+                        <option value="Atribución-No Comercial-Compartir Igual - CC BY-NC-SA">Atribución-No Comercial-Compartir Igual - CC BY-NC-SA</option>
+                        <option value="Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND">Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND</option>
+                        <option value="Ninguna">Ninguna</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-6" ng-if="mostrarLicenciaPublicacionOtro">
+                    <label for="licenciaPublicacionOtro" >{{t.informacionRevistas.otros}}</label>
+                    <input id="licenciaPublicacionOtro" name="licenciaPublicacionOtro" class="form-control" type="text" placeholder="" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="urlTipoPublicacion">{{t.informacionRevistas.urlLicencia}}</label>
+                    <input id="urlTipoPublicacion" name="urlTipoPublicacion" class="form-control" type="url" placeholder="{{t.informacionRevistas.urlejemplo}}" >
+                    <div class="invalid-feedback">
+                        URL no valida.
+                    </div>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="urlInstruccionAutor">{{t.informacionRevistas.urlInstrucciones}} <span style="color: #d93025;">*</span></label>
+                    <input id="urlInstruccionAutor" name="urlInstruccionAutor" class="form-control" type="url" placeholder="{{t.informacionRevistas.urlejemplo}}" required>
+                    <div class="invalid-feedback">
+                        URL no valida.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="autoArchivo">{{t.informacionRevistas.autoarchivo}}<span style="color: #d93025;">*</span></label>
+                <select id="autoArchivo" name="autoArchivo" class="custom-select" required ng-click='ocultarAutoArchivo()'>
+                    <option value="">{{t.informacionRevistas.elegir}}</option>
+                    <option value="Sí">Sí</option>
+                    <option value="Sí en artículos OA de pago por publicación">Sí en artículos OA de pago por publicación</option>
+                    <option value="No">No</option>
+                    <option value="No se menciona">No se menciona</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="versionDelAutoArchivo1">{{t.informacionRevistas.versionAutoarchivo}}</label>
+                <div class="custom-control custom-radio"><!--custom-checkbox-->
+                    <input name="checks2[]" value={{t.opciones.prePrint}} type="radio" class="custom-control-input" id="a1" ng-disabled="mostrarAutoarchivo" ng-model="auto1" ng-click="opcionesAutoArchivo1()"><!--type="checkbox"-->
+                    <label class="custom-control-label" for="a1">{{t.opciones.prePrint}}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input name="checks2[]" value={{t.opciones.posPrint}} type="radio" class="custom-control-input" id="a2" ng-disabled="mostrarAutoarchivo" ng-model="auto2" ng-click="opcionesAutoArchivo2()"><!--type="checkbox"-->
+                    <label class="custom-control-label" for="a2">{{t.opciones.posPrint}}</label>
+                </div>
+                <div style="display: none">Ids seleccionados <span id="str2"></span></div>
+                <input name="versionDelAutoArchivo" id="versionDelAutoArchivo" style="display: none">
+            </div>
+            <div class="row"></div>
+            <!--<div class="form-group"> original
+                <label for="versionAutoarchivo">{{t.informacionRevistas.versionAutoarchivo}}</label>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio21" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio21">{{t.opciones.prePrint}}</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio22" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio22">{{t.opciones.posPrint}}</label>
+                </div>
+            </div>-->
+            <div class="form-group">
+                <label for="autoarchivoCuando">{{t.informacionRevistas.cuandoAutoarchivo}}</label>
+                <div class="custom-control custom-checkbox">
+                    <input name="checks[]" value="Al envío" type="checkbox" class="custom-control-input" ng-disabled="opcionesAa2" id="autoArchivoOp1" ng-model="autoCuando1">
+                    <label class="custom-control-label" for="autoArchivoOp1">{{t.opciones.cuandoAutoarchivoOP1}}</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input name="checks[]"  value="A la aceptación del trabajo" type="checkbox" class="custom-control-input" ng-disabled="opcionesAa2" id="autoArchivoOp2" ng-model="autoCuando2">
+                    <label class="custom-control-label" for="autoArchivoOp2">{{t.opciones.cuandoAutoarchivoOP2}}</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input name="checks[]" value="En el momento de la publicación" type="checkbox" class="custom-control-input" ng-disabled="mostrarAutoarchivo" id="autoArchivoOp3" ng-model="autoCuando3">
+                    <label class="custom-control-label" for="autoArchivoOp3">{{t.opciones.cuandoAutoarchivoOP3}}</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input name="checks[]" value="Después de un periodo de embargo" type="checkbox" class="custom-control-input" ng-disabled="opcionesAa1" id="autoArchivoOp4" ng-model="autoCuando4">
+                    <label class="custom-control-label" for="autoArchivoOp4">{{t.opciones.cuandoAutoarchivoOP4}}</label>
+                 </div>
+                 <div style="display: none">Ids seleccionados <span  id="str"></span></div>
+                 <input name="autoarchivoMomento" id="autoarchivoMomento" style="display: none">
+            </div>
+            <div class="row">
+                
+            </div>
+                <div class="form-group checkbox-group">
+                    <label for="autoAchivoDonde">{{t.informacionRevistas.dondeAutoarchivo}} <span style="color: #d93025;">*</span></label>
+                    <div class="custom-control custom-checkbox">
+                        <input name="checksAutoarchivoDonde[]" value="Web personal" type="checkbox" class="custom-control-input" ng-disabled="mostrarAutoarchivo" id="autoAchivoDondeOp1" ng-model="autoDonde1">
+                        <label class="custom-control-label" for="autoAchivoDondeOp1">{{t.opciones.dondeAutoarchivoOP1}}</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input name="checksAutoarchivoDonde[]" value="Repositorio institucional" type="checkbox" class="custom-control-input" ng-disabled="mostrarAutoarchivo" id="autoAchivoDondeOp2" ng-model="autoDonde2">
+                        <label class="custom-control-label" for="autoAchivoDondeOp2">{{t.opciones.dondeAutoarchivoOP2}}</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input name="checksAutoarchivoDonde[]" value="Repositorio temático" type="checkbox" class="custom-control-input" ng-disabled="mostrarAutoarchivo" id="autoAchivoDondeOp3" ng-model="autoDonde3"> 
+                        <label class="custom-control-label" for="autoAchivoDondeOp3">{{t.opciones.dondeAutoarchivoOP3}}</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input name="" value="Otros" type="checkbox" class="custom-control-input" ng-disabled="mostrarAutoarchivo" id="autoAchivoDondeOp4" ng-model="autoAchivoDondeOtro" ng-click="autoArchivoOtro();">
+                        <label class="custom-control-label" for="autoAchivoDondeOp4">{{t.opciones.dondeAutoarchivoOP4}}</label>
+                    </div>
+                    <div style="display: none">Ids seleccionados <span name="ubicacionAutoarchivo" id="str1"></span></div>
+                    <input name="autoarchivoDonde" id="autoarchivoDonde" style="display: none">
+                </div>
+                <div class="form-group" ng-if="autoArchivoDondeOtro">
+                    <label for="autoArchivoDondeOtro" >{{t.informacionRevistas.otros}}</label>
+                    <input id="autoArchivoDondeOtro" name="ubicacionAutoarchivoOtro" class="form-control" type="text" placeholder="" required>
+                </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="exampleInputPassword1">{{t.informacionRevistas.colorRomeo}} <span style="color: #d93025;">*</span></label>
+                    <select id="colorRomeo" name="colorRomeo" class='form-control' id="inputGroupSelect01" required>
+                        <option value="">{{t.informacionRevistas.elegir}}</option>
+                        <option value="Blanco">Blanco</option>
+                        <option value="Amarillo">Amarillo</option>
+                        <option value="Azul">Azul</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Desconocido">Desconocido</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <div class="">
+                        <label for="indizaciones">{{t.informacionRevistas.indizaciones}}</label>
+                        <div class="input-group mb-3">
+                            <input id="x" type="text" class="form-control" ng-keyup='buscarIndizaciones()' ng-click='searchboxClicked1($event);' ng-model='searchText1' placeholder='Buscar indizaciones'><!--agregue id-->
+                            <div class="input-group-append">
+                                <button id="x" class="btn btn-outline-secondary" type="button" ng-click="addItem($event)" >{{t.informacionRevistas.btnAgregar}}</button>
+                            </div>
+                        </div>
+                        <input id="x" style="display: none" name="indizacionesDB" type="text" class="ng-model" ng-model="addText" >
+                        <input id="listaIndizacion" style="display: none" name="indizacionesDB" type="text" class="ng-model" ng-model="productsCve2" ><!--agregue id-->
+                        <span style="display: none">{{productsCve}}</span>
+                        <div id='searchResult' class="list-group">  <!--searchResult: id-->
+                          <a class="list-group-item" ng-click='setValue1($index,$event)' ng-repeat="result in searchResultIndizacion" style="cursor: pointer;">
+                            <div style="float: left">{{ result.nomentinx}}</div> <div style="float: right; font-size: 10pt;"> ({{result.nompais}}) </div>
+                          </a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!--<ul>
+                        <li ng-repeat="x in products">{{x}}<span ng-click="removeItem($index)">×</span></li>
+                    </ul>-->
+                    <ul class="list-group">
+                        <li class="list-group-item active" style="background: rgb(139, 188, 2); border-color: rgb(139, 188, 2)">{{t.informacionRevistas.listaIndizaciones}}</li>
+                        <li class="list-group-item" ng-repeat="x in products" value="{{x.cveentinx}}">{{x}} <span style="float: right;color: red;font-size: 12pt;font-weight: bold;cursor: pointer;" ng-click="removeItem($index)">×</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                
+            </div>
+
+            <div style="background: rgb(139, 188, 2); color: white; display: flex; justify-content: center; align-items: center; height: 50px; border-radius: 5px;">{{t.contacto.titulo}}</div>
+            <br>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="nombreResponsable">{{t.contacto.nombre}} <span style="color: #d93025;">*</span></label>
+                    <input id="nombreResponsable" name="nombreResponsable" type="text" class="form-control" id="nombreResponsable" placeholder="Nombre" required>
+                </div>
+                <div class="form-group col-sm-6" ng-init="obtenerCargo();">
+                    <label for="cargoResponsable">{{t.contacto.cargo}} <span style="color: #d93025;">*</span></label>
+                    <!--<input name="cargoResponsable" type="text" class="form-control" id="cargoResponsable" placeholder="Cargo" required>-->
+                    <select name="cargoResponsable" class="custom-select" id="cargoResponsable" required ng-model="cargoResponsable"><!--id="select-cargo"-->
+                        <option value="">{{t.informacionRevistas.elegir}}</option>
+                        <option ng-repeat="cargo in cargos" value="{{cargo}}">{{cargo}}</option>
+                    </select>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="telefonoResponsable">{{t.contacto.telefono}} <span style="color: #d93025;">*</span></label>
+                    <input id="telefonoResponsable" name="telefonoResponsable" type="tel" class="form-control" id="telefonoResponsable" placeholder="Teléfono" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="emailResponsable">{{t.contacto.email}} <span style="color: #d93025;">*</span></label>
+                    <input id="emailResponsable" name="emailResponsable" type="email" class="form-control" id="emailResponsable" placeholder="Correo electrónico" required>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px">
+                <button id="btn-enviar" type="submit" class="btn btn-primary" ng-disabled="guardando" style="margin: auto; width: 150px;" >Enviar</button>
+            </div>            
+            </form>
+    </div>
+    
+    <footer>
+        <div id="pre-prePie" ng-if="idioma === 'es'">
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/index.oa">
+                    <img alt="" src="resources/media/proyectos-02-contenido.png" title="Portal de libros y revistas">
+                    <p>Portal de libros y revistas</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/ameli/">
+                    <img alt="" src="resources/media/proyectos-03-xml.png" title="Ameli XML">
+                    <p>AmeliCA XML</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://ojs.amelica.org">
+                    <img alt="" src="resources/media/proyectos-04-ojs.png" title="Comunidad OJS">
+                    <p>Comunidad OJS: usuarios y desarrolladores</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/metricas.html">
+                    <img alt="" src="resources/media/proyectos-05-metricas.png" title="M&eacute;tricas responsables">
+                    <p>M&eacute;tricas Responsables</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/profesionalizacion.html">
+                    <img alt="" src="resources/media/proyectos-06-profesionalizacion.png" title="Profesionalizaci&oacute;n editorial">
+                    <p>Profesionalizaci&oacute;n Editorial</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/ciencia.html">
+                    <img alt="" src="resources/media/proyectos-07-ciencia.png" title="Ciencia abierta">
+                    <p>Ciencia Abierta</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://aura.amelica.org">
+                    <img alt="" src="resources/media/proyectos-08-aura.png" title="Propiedad intelectual">
+                    <p>AURA</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/index.php/index-entradas/">
+                    <img alt="" src="resources/media/proyectos-09-blog.png" title="Blog">
+                    <p>Blog Ameli</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/repositorios.html">
+                    <img alt="" src="resources/media/proyectos-10-repositorios.png" title="Repositorios">
+                    <p>Repositorios</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/observatorio/">
+                    <img alt="" src="resources/media/proyectos-11-observatorio.png" title="Observatorio">
+                    <p>Observatorio de Evaluci&oacute;n</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="pre-prePie" ng-if="idioma === 'en'">
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/index.oa">
+                    <img alt="" src="resources/media/proyectos-02-contenido.png" title="Portal de libros y revistas">
+                    <p>Book Portal and journals</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/ameli/">
+                    <img alt="" src="resources/media/proyectos-03-xml.png" title="Ameli XML">
+                    <p>AmeliCA XML</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://ojs.amelica.org">
+                    <img alt="" src="resources/media/proyectos-04-ojs.png" title="Comunidad OJS">
+                    <p>OJS Community: Users and developers</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/metricas.html">
+                    <img alt="" src="resources/media/proyectos-05-metricas.png" title="M&eacute;tricas responsables">
+                    <p>Responsible Metrics</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/profesionalizacion.html">
+                    <img alt="" src="resources/media/proyectos-06-profesionalizacion.png" title="Profesionalizaci&oacute;n editorial">
+                    <p>Editorial professionalization</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/ciencia.html">
+                    <img alt="" src="resources/media/proyectos-07-ciencia.png" title="Ciencia abierta">
+                    <p>Open Science</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://aura.amelica.org">
+                    <img alt="" src="resources/media/proyectos-08-aura.png" title="Propiedad intelectual">
+                    <p>AURA</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/index.php/index-entradas/">
+                    <img alt="" src="resources/media/proyectos-09-blog.png" title="Blog">
+                    <p>Blog Ameli</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/repositorios.html">
+                    <img alt="" src="resources/media/proyectos-10-repositorios.png" title="Repositorios">
+                    <p>Repositories</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/observatorio/">
+                    <img alt="" src="resources/media/proyectos-11-observatorio.png" title="Observatorio">
+                    <p>Evaluation Observatory</p>
+                </a>
+            </div>
+        </div>
+
+        <div layout="block" id="footer">
+            <div style="display: inline-block">
+                <img src="resources/media/lineaColoresFooter.png" class="lineaColores"></img>
+                
+                <div class="pre-pie-home" ng-if="idioma === 'es'">
+                    <div class="content-links">
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://www.amelica.org/#modeloB">El Modelo</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://www.amelica.org/index.php/principios-y-valores/">Principios y valores</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://www.amelica.org/index.php/que-es-ameli/">¿Qu&eacute; es AmeliCA?</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://www.amelica.org/index.php/sustentabilidad/">¿Cómo participar?</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://www.amelica.org/index.php/preguntas-frecuentes/">Preguntas Frecuentes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pre-pie-home" ng-if="idioma === 'en'">
+                    <div class="content-links">
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://amelica.org/index.php/en/home/#modeloB">Our model</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://amelica.org/index.php/en/principles-and-values/">Principles and values</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://amelica.org/index.php/en/about/">About</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://amelica.org/index.php/en/organizational-chart/">Our team</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://amelica.org/index.php/en/faq/">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pie">
+                <!-- <div id="greca-ameli-pie"></div> -->			
+                <div id="imagen-fondo-pie">
+                    <div id="texto-pie" class="texto-conocimiento" ng-if="idioma === 'es'">
+                        <p class="texto-resaltado">Conocimiento Abierto para <br/> </p>
+                        <span>sin fines de lucro</span><br>
+                        <span>propiedad de la academia </span> 
+                    </div>
+                    <div id="texto-pie" class="texto-conocimiento" ng-if="idioma === 'en'">
+                        <p class="texto-resaltado">Open Knowledge <br/> </p>
+                        <span>not-for-profit</span><br>
+                        <span>academy ownership</span> 
+                    </div>
+                    <div id="linea-cs"></div>
+                    <div class="nivel">
+                        <div id="logotipo-pie1" class="logotipo nivel1"><a class="enlace-pie" href="https://es.unesco.org" target="_blank"></a></div>
+                        <div id="logotipo-pie2" class="logotipo nivel1"><a class="enlace-pie" href="https://www.clacso.org.ar" target="_blank"></a></div>
+                        <div id="logotipo-pie3" class="logotipo nivel1"><a class="enlace-pie" href="https://www.redalyc.org" target="_blank"></a></div>
+                    </div>
+                    <!--<div id="linea-cs"></div>
+                    <div class="nivel">
+                        <div id="logotipo-pie4" class="logotipo nivel2"><a class="enlace-pie" href="http://www.uaemex.mx" target="_blank"></a></div>
+                        <div id="logotipo-pie5" class="logotipo nivel2"><a class="enlace-pie" href="https://unlp.edu.ar" target="_blank"></a></div>
+                        <div id="logotipo-pie6" class="logotipo nivel2"><a class="enlace-pie" href="http://www.udea.edu.co/wps/portal/udea/web/inicio/!ut/p/z1/hY7LDoIwEEW_hQXbzrSCqe4axAWiYIIRuzEQETAIpCD-vo0a48LH7GbuuScDEmKQdTKUedKXTZ1Uet_J8Z5PHEaFhT5HPkexjnzX2iwRAxu2_wCpY_wyAnVf3pGXARfU1gY3XEWBE8489gR-ODyQedWkj3dFnY54DlJlx0xlilyUPhd9305NNJFanDBqE0aYiddGHVqVdZ2Jn5pF0_UQvzWgPcd4sqvBF4ZxA-2zvhU!/dz/d5/L2dBISEvZ0FBIS9nQSEh" target="_blank"></a></div>
+                    </div> -->
+                </div> 
+                <!--<div id="texto-tecnologia">
+                    <div id="texto-logo"></div>
+                </di>	-->
+            </div>
+        </div>
+    </footer>
+    </body>
+    </html>

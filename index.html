@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html ng-app="auraApp">
+
+<head>
+	<link rel="shortcut icon" href="resources/media/miniaura.ico" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<script src="resources/js/angularJS.js"></script>
+	<script src="resources/js/angularJS-route.js"></script>
+	<script src="resources/js/jquery.min-1.8.js"></script>
+	<script src="resources/js/dirPagination.js"></script>
+	<script src="resources/js/auraJS.js"></script>
+	<script src="resources/js/config.js"></script>
+	<link rel="stylesheet" href="resources/css/header-footer.css">
+	<link rel="stylesheet" href="resources/css/pie-ameli.css">
+	<link rel="stylesheet" href="resources/css/auraCSS.css" type="text/css">
+
+	<title>Aura</title>
+	<style>
+		input[type=text] {
+			height: 40px;
+			margin: 10px;
+			width: 100%;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 1px;
+			font-size: 16px;
+			background-color: white;
+			background-image: url(https://www.w3schools.com/howto/searchicon.png);
+			background-position: 10px 10px;
+			background-repeat: no-repeat;
+			padding: 12px 20px 12px 40px;
+			-webkit-transition: width 0.4s ease-in-out;
+			transition: width 0.4s ease-in-out;
+			border-radius: 5px;
+		}
+
+		input[type=text]:focus {
+			width: 100%;
+		}
+
+		.loader {
+			border: 16px solid #f3f3f3;
+			border-radius: 50%;
+			border-top: 16px solid #8cbc00;
+			border-bottom: 16px solid #8cbc00;
+			width: 120px;
+			height: 120px;
+			-webkit-animation: spin 2s linear infinite;
+			animation: spin 2s linear infinite;
+		}
+
+		.button {
+  background-color: #0000; /* Green */
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 2px 1px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #8cbc00;
+}
+
+		@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		.carga {
+			height: 200px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body ng-controller="auraController">
+	<div class="content">
+
+		<div id="header-aura">
+			<div class="header-logo-aura">
+				<a href="index.html"><!--"https://aura.amelica.org/"-->
+					<img src="resources/media/aura-01.png">
+				</a>
+			</div>
+			<div class="header-ligas" ng-if="idioma === 'es'">
+				<a href="index.html"><!--"https://aura.amelica.org/"-->
+					<span id="menu-listado" class="header-option-now lang">Listado de revistas</span>
+				</a>
+				<a href="aura-estadisticas.html">
+					<span id="menu-estadisticas" class="lang">Estadísticas</span>
+				</a>
+				<a href="https://aura.amelica.org/acerca-de-aura.html">
+					<span id="menu-acerca" class="lang">Acerca de</span>
+				</a>
+				<a href="incluir-revista.html"><!--https://aura.amelica.org/incluir-revista.html-->
+					<span id="menu-incluir" class="lang">¿Quiere incluir su revista?</span>
+				</a>
+			</div>
+			<div class="header-ligas" ng-if="idioma === 'en'">
+				<a href="index.html">
+					<span id="menu-listado" class="header-option-now lang">Journals</span>
+				</a>
+				<a href="aura-estadisticas.html">
+					<span id="menu-estadisticas" class="lang">Statistics</span>
+				</a>
+				<a href="https://aura.amelica.org/acerca-de-aura.html">
+					<span id="menu-acerca" class="lang">About</span>
+				</a>
+				<a href="incluir-revista.html"> <!--https://aura.amelica.org/incluir-revista.html-->
+					<span id="menu-incluir" class="lang">Do you want us to include your journal?</span>
+				</a>
+			</div>
+			<div id="header-idioma">
+				<a id="aLink" style="cursor: pointer;" ng-click="myFunc('en')">EN</a>
+				<a id="aLink" style="cursor: pointer;" ng-click="myFunc('es')">ES</a>
+			</div>
+		</div>
+	</div>
+	<div class="linea-gris-separator"></div>
+	<div class="content">
+		<div id="description" ng-if="idioma === 'es'">
+			<div class="description-title text-bold">
+				<p>¿Qué es Aura?</p>
+			</div>
+			<div id="description-text" class="description-text lang">
+				<p>AURA es el espacio desde el cual AmeliCA pretende reflejar el estado general de las revistas
+					científicas respecto a las políticas de apertura y derechos de explotación de la publicación
+					científica. El objetivo de AURA es conocer las políticas editoriales de las revistas científicas
+					respecto al acceso a sus archivos, los derechos de explotación y licencias de publicación y cómo
+					éstos pueden afectar a su posterior auto-archivo en repositorios institucionales o temáticos. Las
+					revistas se clasifican por colores siguiendo la taxonomía de DULCINEA y SHERPA/ROMEO.</p>
+			</div>
+		</div>
+		<div id="description" ng-if="idioma === 'en'">
+			<div class="description-title text-bold">
+				<p>What is Aura?</p>
+			</div>
+			<div id="description-text" class="description-text lang">
+				<p>In AURA, AmeliCA aims to reflect the general state of scholarly journals concerning open access
+					policies and exploitation rights of scholarly publishing. AURA’s goal is to know publishing policies
+					of scholarly journals concerning access to their files, exploitation rights and publishing licenses,
+					and how they affect self-archive in institutional or thematic repositories. Journals are classified
+					by colours in accordance with DULCINEA’s and SHERPA/ROMEO’s taxonomy.</p>
+			</div>
+		</div>
+
+
+
+
+
+		<div id="list">
+			<div class="list-title text-bold" ng-if="idioma === 'es'">
+				 <p>Listado de revistas</p> 
+				
+			</div>
+			
+
+	<div class="list-title text-bold" ng-if="idioma === 'en'">
+		<p>Journals</p>
+			
+	</div>
+			
+	
+	
+	
+	
+	<div class="list-abc">
+		<div
+		 ng-repeat="letra in abecedario"  ng-click="seleccionarLetra(letra)"
+			ng-class="{ colorblack: letra === letraSelected}" class="text-bold">
+			
+			{{letra}}</div>
+			<div  ng-click="buscarOtros()" class="text-bold">Otras</div>			
+	</div>
+
+	<p>
+		
+	</p>	
+
+	
+		
+	</div>
+
+		
+	<div class="searchbox">
+					<input type="text" id="searchText" name="search" placeholder="Buscar por nombre"
+						ng-keydown="tecla($event);" ng-model="searchText">
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="linea-gris-separator"></div>
+	<div class="content">
+
+		
+		
+
+		<div id="table-revistas">
+			<table ng-if="listaRevistas.length > 0">
+				<tr class="table-header" ng-if="idioma === 'es'">
+					<th class="th-td-revista">Revista</th>
+					<th class="text-center th-td-color">Color</th>
+					<th class="text-center th-td-licencia">Tipo de licencia</th>
+					<th class="text-center th-td-acceso">Acceso</th>
+					<th class="text-center th-td-autoarchivo">Autoarchivo</th>
+					<th class="text-center th-td-versiones">Versiones de autoarchivo</th>
+				</tr>
+				<tr class="table-header" ng-if="idioma === 'en'">
+					<th class="th-td-revista">Journal</th>
+					<th class="text-center th-td-color">Color</th>
+					<th class="text-center th-td-licencia">License</th>
+					<th class="text-center th-td-acceso">Access</th>
+					<th class="text-center th-td-autoarchivo">Self-archive</th>
+					<th class="text-center th-td-versiones">Self-archive versions</th>
+				</tr>
+				<tr class="tr-border" dir-paginate="revista in listaRevistas | orderBy:'revista' | itemsPerPage:12">
+					<td><!--{{ revista }}-->
+						<!--<a href="http://148.215.24.37/proyectoAura/aura/detalle-revista.php?cveRevista={{revista.cveRevista}}"-->
+							<!--{{revista.cveRevista}}-->
+						<a href="detalle-revista.html?cveRevista={{revista[0]}}"
+							target="_blank">
+							<span style="cursor: pointer;" class="colorblack">{{revista[1]}}</span><!--revista.nomRevista-->
+						</a>
+					</td>
+					<td class="text-center">
+						<div class="punto"
+							ng-class="{pazul: revista[5] == 'Azul', pamar: revista[5] == 'Amarillo', pverde: revista[5] == 'Verde', pblanco: revista[5] == 'Blanca',}"><!--revista.colorRomeo-->
+						</div>
+					</td>
+					<td class="text-center">
+						<!--revista.licenciaPublicacion-->
+						<img ng-if="revista[6] === 'Atribución - CC BY'"
+							src="resources/media/rec-03cc-by.png">
+						<img ng-if="revista[6] === 'Atribución-Compartir Igual - CC BY-SA'"
+							src="resources/media/rec-04by-sa.png">
+						<img ng-if="revista[6] === 'Atribución-No Comercial - CC BY-NC'"
+							src="resources/media/rec-06by-nc.png">
+						<img ng-if="revista[6] === 'Atribución-No Comercial-Compartir Igual - CC BY-NC-SA'"
+							src="resources/media/rec-07by-nc-sa.png">
+						<img ng-if="revista[6] === 'Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND'"
+							src="resources/media/rec-08by-nc-nd.png">
+						<img ng-if="revista[6] === 'Atribución-Sin Derivadas - CC BY-ND'"
+							src="resources/media/rec-05by-nd.png">
+					</td>
+					<td class="text-center">
+						<!--revista.acceso-->
+						<img ng-if="revista[3] === 'Gratuito'" src="resources/media/rec-13gratuito.png">
+						<img ng-if="revista[3] === 'Gratuito despues de un embargo'"
+							src="resources/media/rec-14embargo.png">
+						<img ng-if="revista[3] === 'Gratuito online - suscripción versión impresa'"
+							src="resources/media/rec-16online.png">
+						<img ng-if="revista[3] === 'Hibrido'" src="resources/media/rec-17hibrido.png">
+					</td>
+					<td class="text-center">
+						<img ng-if="revista[4] === 'Sí'" src="resources/media/autorchivo-18.png">
+						<img ng-if="revista[4] === 'No'" src="resources/media/autorchivo-19.png">
+					</td>
+					<td class="text-center">
+						<span>{{revista[7]}}</span><!--{{revista.versionAutoarchivo}}-->
+					</td>
+				</tr>
+			</table>
+			<div class="resultados" ng-if="listaRevistas.length === 0">
+				Sin resultados
+			</div>
+			<div class="carga" ng-if="cargando">
+				<div class="loader"></div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<div ng-if="listaRevistas.length > 0">
+			<dir-pagination-controls max-size="6" direction-links="true" boundary-links="true"
+				template-url="resources/css/dirPaginationTemplate.html">
+			</dir-pagination-controls>
+		</div>
+
+		<div id="accesos" ng-if="idioma === 'es'">
+			<div class="lang">
+				<img src="resources/media/rec-13gratuito.png">
+				<p>Gratuito</p>
+			</div>
+			<div>
+				<img src="resources/media/rec-14embargo.png">
+				<p>Gratuito despues de un embargo</p>
+			</div>
+			<div>
+				<img src="resources/media/rec-15restringido.png">
+				<p>Restringido a suscriptores</p>
+			</div>
+			<div>
+				<img src="resources/media/rec-16online.png">
+				<p>Gratuito online - suscripción versión impresa</p>
+			</div>
+			<div>
+				<img src="resources/media/rec-17hibrido.png">
+				<p>Hibrido</p>
+			</div>
+		</div>
+		<div id="accesos" ng-if="idioma === 'en'">
+			<div class="lang">
+				<img src="resources/media/rec-13gratuito.png">
+				<p>Free</p>
+			</div>
+			<div>
+				<img src="resources/media/rec-14embargo.png">
+				<p>Free after an embargo period</p>
+			</div>
+			<div>
+				<img src="resources/media/rec-15restringido.png">
+				<p>Only for subscribers</p>
+			</div>
+			<div>
+				<img src="resources/media/rec-16online.png">
+				<p>Free online-subscription printed version</p>
+			</div>
+			<div>
+				<img src="resources/media/rec-17hibrido.png">
+				<p>Hybrid</p>
+			</div>
+		</div>
+
+		<div id="propuestas">
+			<div class="propuestas-title text-bold" ng-if="idioma === 'es'">
+				<p>Propuestas de interés</p>
+			</div>
+			<div class="propuestas-title text-bold" ng-if="idioma === 'en'">
+				<p>You may be interested in:</p>
+			</div>
+			<div class="propuestas-content">
+				<div class="propuestas-logos">
+					<a target="_blank" href="https://creativecommons.org">
+						<img src="resources/media/int-CREATIVE.png">
+					</a>
+				</div>
+				<div class="propuestas-logos">
+					<a target="_blank" href="https://www.accesoabierto.net/dulcinea/">
+						<img src="resources/media/int-DULCINEA.png">
+					</a>
+				</div>
+				<div class="propuestas-logos">
+					<a target="_blank" href="http://www.accesoabiertoalyc.org/declaracion-mexico/">
+						<img class="declaracion-img" src="resources/media/int-declaracion-de-mexico.png">
+					</a>
+				</div>
+				<div class="propuestas-logos">
+					<a target="_blank" href="http://www.sherpa.ac.uk/romeo/index.php?la=es">
+						<img src="resources/media/int-SHERPA.png">
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<footer>
+        <div id="pre-prePie" ng-if="idioma === 'es'">
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/index.oa">
+                    <img alt="" src="resources/media/proyectos-02-contenido.png" title="Portal de libros y revistas">
+                    <p>Portal de libros y revistas</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/ameli/">
+                    <img alt="" src="resources/media/proyectos-03-xml.png" title="Ameli XML">
+                    <p>AmeliCA XML</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://ojs.amelica.org">
+                    <img alt="" src="resources/media/proyectos-04-ojs.png" title="Comunidad OJS">
+                    <p>Comunidad OJS: usuarios y desarrolladores</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/metricas.html">
+                    <img alt="" src="resources/media/proyectos-05-metricas.png" title="M&eacute;tricas responsables">
+                    <p>M&eacute;tricas Responsables</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/profesionalizacion.html">
+                    <img alt="" src="resources/media/proyectos-06-profesionalizacion.png" title="Profesionalizaci&oacute;n editorial">
+                    <p>Profesionalizaci&oacute;n Editorial</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/ciencia.html">
+                    <img alt="" src="resources/media/proyectos-07-ciencia.png" title="Ciencia abierta">
+                    <p>Ciencia Abierta</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://aura.amelica.org">
+                    <img alt="" src="resources/media/proyectos-08-aura.png" title="Propiedad intelectual">
+                    <p>AURA</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/index.php/index-entradas/">
+                    <img alt="" src="resources/media/proyectos-09-blog.png" title="Blog">
+                    <p>Blog Ameli</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/repositorios.html">
+                    <img alt="" src="resources/media/proyectos-10-repositorios.png" title="Repositorios">
+                    <p>Repositorios</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/observatorio/">
+                    <img alt="" src="resources/media/proyectos-11-observatorio.png" title="Observatorio">
+                    <p>Observatorio de Evaluci&oacute;n</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="pre-prePie" ng-if="idioma === 'en'">
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/index.oa">
+                    <img alt="" src="resources/media/proyectos-02-contenido.png" title="Portal de libros y revistas">
+                    <p>Book Portal and journals</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/ameli/">
+                    <img alt="" src="resources/media/proyectos-03-xml.png" title="Ameli XML">
+                    <p>AmeliCA XML</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://ojs.amelica.org">
+                    <img alt="" src="resources/media/proyectos-04-ojs.png" title="Comunidad OJS">
+                    <p>OJS Community: Users and developers</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/metricas.html">
+                    <img alt="" src="resources/media/proyectos-05-metricas.png" title="M&eacute;tricas responsables">
+                    <p>Responsible Metrics</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/profesionalizacion.html">
+                    <img alt="" src="resources/media/proyectos-06-profesionalizacion.png" title="Profesionalizaci&oacute;n editorial">
+                    <p>Editorial professionalization</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/ciencia.html">
+                    <img alt="" src="resources/media/proyectos-07-ciencia.png" title="Ciencia abierta">
+                    <p>Open Science</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://aura.amelica.org">
+                    <img alt="" src="resources/media/proyectos-08-aura.png" title="Propiedad intelectual">
+                    <p>AURA</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/index.php/index-entradas/">
+                    <img alt="" src="resources/media/proyectos-09-blog.png" title="Blog">
+                    <p>Blog Ameli</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://www.amelica.org/proyectos/repositorios.html">
+                    <img alt="" src="resources/media/proyectos-10-repositorios.png" title="Repositorios">
+                    <p>Repositories</p>
+                </a>
+            </div>
+            <div class="icon-pre-pre">
+                <a href="https://portal.amelica.org/observatorio/">
+                    <img alt="" src="resources/media/proyectos-11-observatorio.png" title="Observatorio">
+                    <p>Evaluation Observatory</p>
+                </a>
+            </div>
+        </div>
+
+        <div layout="block" id="footer">
+            <div style="display: inline-block">
+                <img src="resources/media/lineaColoresFooter.png" class="lineaColores"></img>
+                
+                <div class="pre-pie-home" ng-if="idioma === 'es'">
+                    <div class="content-links">
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://www.amelica.org/#modeloB">El Modelo</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://www.amelica.org/index.php/principios-y-valores/">Principios y valores</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://www.amelica.org/index.php/que-es-ameli/">¿Qu&eacute; es AmeliCA?</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://www.amelica.org/index.php/sustentabilidad/">¿Cómo participar?</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://www.amelica.org/index.php/preguntas-frecuentes/">Preguntas Frecuentes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pre-pie-home" ng-if="idioma === 'en'">
+                    <div class="content-links">
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://amelica.org/index.php/en/home/#modeloB">Our model</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://amelica.org/index.php/en/principles-and-values/">Principles and values</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://amelica.org/index.php/en/about/">About</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://amelica.org/index.php/en/organizational-chart/">Our team</a>
+                        </div>
+                        <div class="links-pre-pie">
+                            <a target="_blank" href="https://amelica.org/index.php/en/faq/">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pie">
+                <!-- <div id="greca-ameli-pie"></div> -->			
+                <div id="imagen-fondo-pie">
+                    <div id="texto-pie" class="texto-conocimiento" ng-if="idioma === 'es'">
+                        <p class="texto-resaltado">Conocimiento Abierto para <br/> </p>
+                        <span>sin fines de lucro</span><br>
+                        <span>propiedad de la academia </span> 
+                    </div>
+                    <div id="texto-pie" class="texto-conocimiento" ng-if="idioma === 'en'">
+                        <p class="texto-resaltado">Open Knowledge <br/> </p>
+                        <span>not-for-profit</span><br>
+                        <span>academy ownership</span> 
+                    </div>
+                    <div id="linea-cs"></div>
+                    <div class="nivel">
+                        <div id="logotipo-pie1" class="logotipo nivel1"><a class="enlace-pie" href="https://es.unesco.org" target="_blank"></a></div>
+                        <div id="logotipo-pie2" class="logotipo nivel1"><a class="enlace-pie" href="https://www.clacso.org.ar" target="_blank"></a></div>
+                        <div id="logotipo-pie3" class="logotipo nivel1"><a class="enlace-pie" href="https://www.redalyc.org" target="_blank"></a></div>
+                    </div>
+                    <!--<div id="linea-cs"></div>
+                    <div class="nivel">
+                        <div id="logotipo-pie4" class="logotipo nivel2"><a class="enlace-pie" href="http://www.uaemex.mx" target="_blank"></a></div>
+                        <div id="logotipo-pie5" class="logotipo nivel2"><a class="enlace-pie" href="https://unlp.edu.ar" target="_blank"></a></div>
+                        <div id="logotipo-pie6" class="logotipo nivel2"><a class="enlace-pie" href="http://www.udea.edu.co/wps/portal/udea/web/inicio/!ut/p/z1/hY7LDoIwEEW_hQXbzrSCqe4axAWiYIIRuzEQETAIpCD-vo0a48LH7GbuuScDEmKQdTKUedKXTZ1Uet_J8Z5PHEaFhT5HPkexjnzX2iwRAxu2_wCpY_wyAnVf3pGXARfU1gY3XEWBE8489gR-ODyQedWkj3dFnY54DlJlx0xlilyUPhd9305NNJFanDBqE0aYiddGHVqVdZ2Jn5pF0_UQvzWgPcd4sqvBF4ZxA-2zvhU!/dz/d5/L2dBISEvZ0FBIS9nQSEh" target="_blank"></a></div>
+                    </div> -->
+                </div> 
+                <!--<div id="texto-tecnologia">
+                    <div id="texto-logo"></div>
+                </di>	-->
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

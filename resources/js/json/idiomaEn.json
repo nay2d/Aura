@@ -1,0 +1,101 @@
+{
+  "menu":
+  {
+    "op1":"Journals",
+    "op2":"Statistics",
+    "op3":"About",
+    "op4":"Do you want us to include your journal?"
+  },
+
+  "formulario" : 
+	{
+		"titulo"  	 : "Aura Registration Form",
+		"descripcion" 	 : "In AURA, AmeliCA aims to reflect the general state of scholarly journals concerning open access policies and exploitation rights of scholarly publishing. AURA’s goal is to know publishing policies of scholarly journals concerning access to their files, exploitation rights and publishing licenses, and how they affect self-archive in institutional or thematic repositories. Journals are classified by colours in accordance with DULCINEA’s and SHERPA/ROMEO’s taxonomy.",
+		"obligatorio"	  	 : "*Obligatorio"
+  },
+
+  "informacionRevistas":
+  {
+    "titulo": "Journal’s information",
+    "nombre": "Journal’s full name",
+    "url": "Journal’s URL",
+    "pais": "Country",
+    "nombreInstitucion": "Publishing Institution’s full name ",
+    "otraInstitucion": "If you don't see the institution you're looking for, add other institution ",
+    "nombreOtraInstitucion": "Publishing institution's full name",
+    "tipo": "Type of publisher",
+    "organo": "Organization",
+    "organoSmall": "Only for journals from learned societies",
+    "acceso": "Access",
+    "mesesEmbargo": "If the journal has an embargo period, what is its length?",
+    "categoria": "Journal’s category",
+    "derechos": "Is the holder of exploitation rights of contents specifically mentioned in the journal?",
+    "titularDerechos": "Choose who holds the exploitation rights of the journal’s contents (copyright)",
+    "ubicacionDerechos": "Rights are mentioned in…",
+    "urlDerechos": "Provide the link to such section",
+    "licencia": "Choose the license used to publish contents",
+    "urlLicencia": "URL to the section where license is indicated.",
+    "urlInstrucciones": "URL to the authors’ guidelines section.",
+    "autoarchivo": "Is self-archive permitted?",
+    "versionAutoarchivo": "Self-archive version:",
+    "cuandoAutoarchivo": "If self-archive is permitted, when could it be done?",
+    "dondeAutoarchivo": "Where is self-archive permitted?",
+    "colorRomeo": "ROMEO color",
+    "indizaciones": "Indexing",
+    "listaIndizaciones": "List of selected indexing",
+    "otros": "Another option.",
+    "btnAgregar": "Add",
+    "placeRevista":"Journal",
+    "urlejemplo":"http://www.example.com",
+    "elegir":"choose an option..."
+  },
+
+  "opciones": 
+  {
+    "prePrint": "Pre-print (without assessment), Post-print (publisher’s version)",
+    "posPrint": "Post-print (publisher’s version)",
+    "cuandoAutoarchivoOP1": "When the work is sent",
+    "cuandoAutoarchivoOP2": "When the work is accepted",
+    "cuandoAutoarchivoOP3": "When the work is published",
+    "cuandoAutoarchivoOP4": "After an embargo period",
+    "dondeAutoarchivoOP1": "Author’s personal website",
+    "dondeAutoarchivoOP2": "Institutional repository",
+    "dondeAutoarchivoOP3": "Subject repository",
+    "dondeAutoarchivoOP4": "Other"
+  },
+
+  "contacto":
+  {
+    "titulo": "Contact Information",
+    "nombre": "Name",
+    "cargo": "Position",
+    "telefono": "Telephone number",
+    "email": "Email"
+  },
+  
+  "detalleRevista":
+  {
+    "regresar":"Back to the list",
+    "editorial":"Editorial",
+    "titularDerechos":"Copyright holder",
+    "issnElectronico":"eISSN",
+    "issnImpreso":"ISSN",
+    "issnL":"ISSN-L",
+    "urlRevista":"URL",
+    "nomCategoria":"Category",
+    "acceso":"Type of Access",
+    "mesesEmbargo":"Embargo",
+    "derechosExplotacion":"Copyright specifically mentioned?",
+    "ubicacionMencionDerechos":"Copyright location",
+    "urlMencionDerechos":"URL to copyright",
+    "licenciaPublicacion":"License",
+    "urlInstruccionAutor":"URL to author guidelines",
+    "autoArchivo":"Permits self-archive?",
+    "versionAutoarchivo":"Self-archive version",
+    "autoarchivoMomento":"When?",
+    "ubicacionAutoarchivo":"Where?",
+    "colorRomeo":"Color ROMEO",
+    "textoIndizacion":"Indexed in"
+  }
+
+}

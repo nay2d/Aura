@@ -1,0 +1,43 @@
+<html>
+
+<head>
+<link rel="stylesheet"
+	href="resources/css/paginador.css">
+</head>
+
+<body>
+	<div class="pagination" ng-if="1<pages.length">
+			
+		<span ng-if="boundaryLinks"
+			ng-class="{ disabled : pagination.current == 1 }"> 
+			<a class="raquos" ng-click="setCurrent(1)">&laquo;&laquo;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+		</span> 
+		
+		<span ng-if="directionLinks"
+			ng-class="{ disabled : pagination.current == 1 }" class="ng-scope">
+			<a class="raquos" ng-click="setCurrent(pagination.current - 1)"
+			class="ng-binding">&laquo;</a>
+		</span> 
+		
+		<span ng-repeat="pageNumber in pages track by $index">
+			<a ng-class="{ pageSelected: pageNumber == pagination.current, pageUnSelected: pageNumber != pagination.current}"
+			 href="" ng-click="setCurrent(pageNumber)">{{'&nbsp&nbsp'+pageNumber+'&nbsp&nbsp'}}</a>
+		</span>
+		
+		<span ng-if="directionLinks"
+			ng-class="{ disabled : pagination.current == pagination.last }"
+			class="ng-scope"> <a class="raquos"
+			ng-click="setCurrent(pagination.current + 1)" class="ng-binding">&raquo;</a>
+		</span> 
+		
+		<span ng-if="boundaryLinks"
+			ng-class="{ disabled : pagination.current == pagination.last }">
+			<a class="raquos" ng-click="setCurrent(pagination.last)">&nbsp;&nbsp;&nbsp;&nbsp;&raquo;&raquo;</a>
+		</span>
+	</div>
+</body>
+
+
+</html>
+
+

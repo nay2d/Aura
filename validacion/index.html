@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html ng-app="auraApp">
+<head>
+	<title>Validación de revistas Aura</title><!--Registros AURA-->
+	<link rel="shortcut icon" href="../resources/media/miniaura.ico" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../resources/css/header-footer.css">
+	<link rel="stylesheet" href="../resources/css/pie-ameli.css">
+	<link rel="stylesheet" href="../resources/css/auraCSS.css" type="text/css">
+	<link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <script src="../resources/js/jquery-slim.min.js" ></script>
+    <script src="../resources/js/popper.min.js" ></script>
+    <script src="../resources/js/bootstrap.min.js" ></script>
+	<script src="../resources/js/angularJS.js"></script>
+	<script src="../resources/js/angularJS-route.js"></script>
+	<script src="../resources/js/jquery.min-1.8.js"></script>
+	<script src="../resources/js/dirPagination.js"></script>
+	<script src="../resources/js/auraDatos.js"></script>
+	<script src="../resources/js/config.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<style>
+		.row {
+			text-align: center;
+			margin: auto;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 10px;
+		}
+	</style>
+
+</head>
+
+<body ng-controller="auraController" ng-init="cargarDatos()">
+	<div class="content" style="width: 80%">
+		<div id="header-aura">
+			<div class="header-logo-aura">
+				<a href="../index.html">
+					<img src="../resources/media/aura-01.png">
+				</a>
+			</div>
+		</div>
+		<div class="container">
+			<hr>
+			<div class="row">
+				<form class="form-inline" style="margin-bottom: -20px;">
+					<div class="form-group">
+						<label>Buscar por nombre: </label>
+						<input name="tb1" id="searchText" class="form-control" ng-model="searchText" style="margin: 20px;">
+						<button type="submit" class="btn btn-outline-success" ng-click="buscarDatos();">Buscar</button>
+					</div>
+				</form>
+			</div>
+			<div style="text-align: center">
+				ó
+			<div class="row">
+				<div class="form-group col-sm-6">
+					<label>Buscar por estado: </label>
+					<label class="radio-inline"><input type="radio" name="optradio" value="1" ng-model="estado" ng-change='filtrar(value)'>Validadas</label>
+					<label class="radio-inline"><input type="radio" id="ddd" name="optradio" value="0" ng-model="estado" ng-change='filtrar(value)'>No validadas</label>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<!-- Navegar hacia atrás -->
+				<button class="btn btn-link" type='button' ng-disabled='currentPage == 0' ng-click='currentPage = currentPage - 1'>&laquo;</button>
+
+				<!-- Navegar a una página especifica-->
+				<button class="btn btn-link" type='button' ng-disabled='currentPage == page.no - 1' ng-click='setPage(page.no)' ng-repeat='page in pages'>{{page.no}}</button>
+
+				<!-- Navegar hacia adelante -->
+				<button class="btn btn-link" type='button' ng-disabled='currentPage >= data.length/pageSize - 1' ng-click='currentPage = currentPage + 1'>&raquo;</button>
+			</div>
+			<table class="table table-bordered table-striped table-hover ">
+				<thead class="thead-dark">
+					<tr class="bg-primary">
+						<th>Clave</th>
+						<th>Nombre</th>
+						<th>País</th>
+						<th>Institución</th>
+						<th>Nombre de Contacto</th>
+						<th>Correo de Contacto</th>
+						<th>Estado</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="revista in revistas | startFromGrid: currentPage * pageSize | limitTo: pageSize" ng-if="mostrarDatos == true">
+						<td>{{revista[0]}}</td><!--{{revista.cveRevista}}-->
+						<td>{{revista[1]}}</td><!--{{revista.nomRevista}}-->
+						<td>{{revista[8]}}</td><!--{{revista.nompais}}-->
+						<td>{{revista[4]}}</td><!--{{revista.nomInstitucion}}-->
+						<td>{{revista[6]}}</td><!--{{revista.nombreContacto}}-->
+						<td>{{revista[7]}}</td><!--{{revista.emailUsu}}-->
+						<td align="center" valign="middle" ng-switch="revista[5]"><!--revista.Validada-->
+							<span><img ng-switch-when="1" src="https://cdn.pixabay.com/photo/2013/07/12/18/22/check-153363_960_720.png" width="20px" height="20px" data-toggle="tooltip" title="Validado"></span>
+							<span><img ng-switch-when="0" src="https://cdn2.iconfinder.com/data/icons/freecns-cumulus/32/519791-101_Warning-512.png" width="20px" height="20px" data-toggle="tooltip2" title="No Validado"></span>
+						</td>
+						<td><a class="btn btn-outline-success" ng-href="datosRevista.html?cveRevista={{revista[0]}}" role="button">Modificar</a></td><!--Ver Revista-->
+						<!--<td><a class="btn btn-outline-success" ng-href="http://148.215.24.32/proyecto/aura/validacion/datosRevista3.html?cveRevista={{revista[0]}}" role="button">Modificar</a></td><!--Ver Revista-->
+					</tr>
+					<tr ng-if="mostrarDatos == false">
+						<td colspan="8">Sin Resultados</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="row">
+				<!-- Navegar hacia atrás -->
+				<button class="btn btn-link" type='button' ng-disabled='currentPage == 0' ng-click='currentPage = currentPage - 1'>&laquo;</button>
+
+				<!-- Navegar a una página especifica-->
+				<button class="btn btn-link" type='button' ng-disabled='currentPage == page.no - 1' ng-click='setPage(page.no)' ng-repeat='page in pages'>{{page.no}}</button>
+
+				<!-- Navegar hacia adelante -->
+				<button class="btn btn-link" type='button' ng-disabled='currentPage >= data.length/pageSize - 1' ng-click='currentPage = currentPage + 1'>&raquo;</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

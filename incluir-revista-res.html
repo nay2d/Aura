@@ -1,0 +1,1235 @@
+	<!DOCTYPE html>
+	<html ng-app="auraApp">
+	<head>
+		<link rel="shortcut icon" href="resources/media/miniaura.ico" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="resources/css/header-footer.css">
+		<link rel="stylesheet" href="resources/css/pie-ameli.css">
+		<link rel="stylesheet" href="resources/css/auraCSS.css" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="resources/js/angularJS.js"></script>
+		<script src="resources/js/angularJS-route.js"></script>
+		<script src="resources/js/jquery.min-1.8.js"></script>
+		<script src="resources/js/dirPagination.js"></script>
+		<script src="resources/js/auraJS.js"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	 		<style>
+			.swal-button-container { 
+				font-size: 12pt; 
+			} 
+	 		</style> 
+		<title>¿Quiere incluir su revista?</title>
+
+	</head>
+	<body ng-controller="auraController">
+		<div class="content">			
+			<div id="header-aura">
+				<div class="header-logo-aura">
+					<a href="https://aura.amelica.org/">
+						<img src="resources/media/aura-01.png">
+					</a>
+				</div>
+				<div class="header-ligas" ng-if="idioma === 'es'">
+					<a href="https://aura.amelica.org/">
+						<span>Listado de revistas</span>
+					</a>
+					<a href="https://aura.amelica.org/aura-estadisticas.html">
+						<span>Estadísticas</span>
+					</a>
+					<a href="https://aura.amelica.org/acerca-de-aura.html">
+						<span>Acerca de</span>
+					</a>
+					<a href="https://aura.amelica.org/incluir-revista.html">
+						<span class="header-option-now">¿Quiere incluir su revista?</span>
+					</a>
+				</div>
+				<div class="header-ligas" ng-if="idioma === 'en'">
+					<a href="https://aura.amelica.org/">
+						<span>Journals</span>
+					</a>
+					<a href="https://aura.amelica.org/aura-estadisticas.html">
+						<span>Statistics</span>
+					</a>
+					<a href="https://aura.amelica.org/acerca-de-aura.html">
+						<span>About</span>
+					</a>
+					<a href="https://aura.amelica.org/incluir-revista.html">
+						<span class="header-option-now">Do you want us to include your journal?</span>
+					</a>
+				</div>
+				<div id="header-idioma">
+					<a id="aLink" style="cursor: pointer;" ng-click="myFunc('en')">EN</a>
+					<a id="aLink" style="cursor: pointer;" ng-click="myFunc('es')">ES</a>
+				</div>
+			</div>
+		</div>
+		<div class="linea-gris-separator"></div>
+		<div class="content" style="margin: 40px auto;">
+					<!--<iframe id="prueba" width="100%" height="800px" style="border: none;" src="https://docs.google.com/forms/d/e/1FAIpQLSdFzSb3xUALubLlFeUE2bdGNjalgTAtZclyRa6HV5iUVx_E9w/viewform">
+					</iframe>-->
+					<div id="formularioES" style="width: 80%; margin: 0 auto;" >
+						<h1 style="text-align: center;">Aura-Formulario de registro</h1>
+						<p style="text-align: justify;">AURA es el espacio desde el cual AmeliCA pretende reflejar el estado general de las revistas científicas respecto a las políticas de apertura y derechos de explotación de la publicación científica. El objetivo de AURA es conocer las políticas editoriales de las revistas científicas respecto al acceso a sus archivos, los derechos de explotación y licencias de publicación y cómo éstos pueden afectar a su posterior auto-archivo en repositorios institucionales o temáticos. Las revistas se clasifican por colores siguiendo la taxonomía de DULCINEA y SHERPA/ROMEO.</p>
+						<p>**NOTA: Este formulario debe llenarse mediante una cuenta de correo de gmail.</p>
+						<p style="color: red;">*Obligatorio</p>
+
+						<form class="needs-validation1" novalidate method="post" action="guardarDatosPg.php">
+						  <!--<div class="form-group">
+						    <label for="exampleInputEmail1">Dirección de correo electrónico <span style="color: #d93025;">*</span></label>
+						    <input type="email" class="form-control" id="validationCustom03" aria-describedby="emailHelp" placeholder="Enter email" required>
+						    <div class="invalid-feedback">
+						    	Por favor ingrese un correo valido.
+						    </div>
+						</div>-->
+						<div>
+						<div style="background: rgb(139, 188, 2); color: white; display: flex; justify-content: center; align-items: center; height: 50px; border-radius: 5px;">Datos de la revista</div>
+						<br>
+						<div class="form-group">
+							<label for="nombreRevista">Nombre completo de la revista <span style="color: #d93025;">*</span></label>
+							<input 	name="nombreRevista" class="form-control" type="text" placeholder="Revista" required>
+							<div class="invalid-feedback">
+								Por favor ingrese un dato valido.
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="urlRevista">URL del portal de la revista <span style="color: #d93025;">*</span></label>
+							<input name="urlRevista" class="form-control" type="url" placeholder="http://www.ejemplo.com" required>
+							<div class="invalid-feedback">
+								Por favor ingrese un dato valido.
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Nombre completo de la institución editora <span style="color: #d93025;">*</span></label>
+							<input name="institucion" class="form-control" type="text" placeholder="Institución" required>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Tipo editorial <span style="color: #d93025;">*</span></label>
+							<select name="tipoEditorial" class="custom-select" id="tipo-editorial" required>
+								<option value="">Eliga un opción...</option>
+								<option value="Universidad/Centro de Investigación">Universidad/Centro de Investigación</option>
+								<option value="Comercial">Comercial</option>
+								<option value="Asociación/Sociedad">Asociación/Sociedad</option>
+								<option value="Museo">Museo</option>
+								<option value="Fundación">Fundación</option>
+								<option value="Colegio Profesional">Colegio Profesional</option>
+								<option value="Real Academia">Real Academia</option>
+								<option value="Gubernamental">Gubernamental</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="pais">Pais<span style="color: #d93025;">*</span></label>
+							<select name="pais" class="custom-select" id="pais" required>
+								<option value="">Eliga un opción...</option>
+								<option value="Afganistán">Afganistán</option>
+								<option value="Alabania">Alabania</option>
+								<option value="Alemania">Alemania</option>
+								<option value="Andorra">Andorra</option>
+								<option value="Angola">Angola</option>
+								<option value="Antigua y Barbuda">Antigua y Barbuda</option>
+								<option value="Antártida">Antártida</option>
+								<option value="Arabia Saudita">Arabia Saudita</option>
+								<option value="Argelia">Argelia</option>
+								<option value="Argentina">Argentina</option>
+								<option value="Armenia">Armenia</option>
+								<option value="Australia">Australia</option>
+								<option value="Austria">Austria</option>
+								<option value="Azerbaiyán">Azerbaiyán</option>
+								<option value="Bahamas">Bahamas</option>
+								<option value="Bahréin">Bahréin</option>
+								<option value="Bangladesh">Bangladesh</option>
+								<option value="Barbados">Barbados</option>
+								<option value="Belice">Belice</option>
+								<option value="Benín">Benín</option>
+								<option value="Bielorrusia">Bielorrusia</option>
+								<option value="Birmania">Birmania</option>
+								<option value="Bolivia">Bolivia</option>
+								<option value="Bosnia y Herzegovina">Bosnia y Herzegovina</option>
+								<option value="Botswana">Botswana</option>
+								<option value="Brasil">Brasil</option>
+								<option value="Brunei Darussalam">Brunei Darussalam</option>
+								<option value="Bulgaria">Bulgaria</option>
+								<option value="Burkina Faso">Burkina Faso</option>
+								<option value="Burundi">Burundi</option>
+								<option value="Bután">Bután</option>
+								<option value="Bélgica">Bélgica</option>
+								<option value="Cabo Verde">Cabo Verde</option>
+								<option value="Camboya">Camboya</option>
+								<option value="Camerún">Camerún</option>
+								<option value="Canadá">Canadá</option>
+								<option value="Chad-">Chad-</option>
+								<option value="Chile">Chile</option>
+								<option value="China">China</option>
+								<option value="Chipre">Chipre</option>
+								<option value="Ciudad estado del vaticano">Ciudad estado del vaticano</option>
+								<option value="Colombia">Colombia</option>
+								<option value="Congo">Congo</option>
+								<option value="Corea">Corea</option>
+								<option value="Corea del Sur">Corea del Sur</option>
+								<option value="Costa Rica">Costa Rica</option>
+								<option value="Costa de Marfil">Costa de Marfil</option>
+								<option value="Croacia">Croacia</option>
+								<option value="Cuba">Cuba</option>
+								<option value="Côte d'Ivoire">Côte d'Ivoire</option>
+								<option value="Dinamarca">Dinamarca</option>
+								<option value="Ecuador">Ecuador</option>
+								<option value="Egipto">Egipto</option>
+								<option value="El Salvador">El Salvador</option>
+								<option value="Emiratos Árabes Unidos">Emiratos Árabes Unidos</option>
+								<option value="Eritrea">Eritrea</option>
+								<option value="Escocia">Escocia</option>
+								<option value="Eslovaquia">Eslovaquia</option>
+								<option value="Eslovenia">Eslovenia</option>
+								<option value="España">España</option>
+								<option value="Estados Federados de Micronesia">Estados Federados de Micronesia</option>
+								<option value="Estados Unidos">Estados Unidos</option>
+								<option value="Estonia">Estonia</option>
+								<option value="Etiopía">Etiopía</option>
+								<option value="Federación de las Indias Occidentales">Federación de las Indias Occidentales</option>
+								<option value="Fiji">Fiji</option>
+								<option value="Filipinas">Filipinas</option>
+								<option value="Finlandia">Finlandia</option>
+								<option value="Francia">Francia</option>
+								<option value="Gabón">Gabón</option>
+								<option value="Gales">Gales</option>
+								<option value="Gambia">Gambia</option>
+								<option value="Georgia">Georgia</option>
+								<option value="Ghana">Ghana</option>
+								<option value="Gibraltar">Gibraltar</option>
+								<option value="Granada">Granada</option>
+								<option value="Grecia">Grecia</option>
+								<option value="Groenlandia">Groenlandia</option>
+								<option value="Guatemala">Guatemala</option>
+								<option value="Guayana">Guayana</option>
+								<option value="Guinea">Guinea</option>
+								<option value="Guinea-Bissau">Guinea-Bissau</option>
+								<option value="Haití">Haití</option>
+								<option value="Holanda">Holanda</option>
+								<option value="Honduras">Honduras</option>
+								<option value="Hong Kong">Hong Kong</option>
+								<option value="Hungría">Hungría</option>
+								<option value="India">India</option>
+								<option value="Indonesia">Indonesia</option>
+								<option value="Irak">Irak</option>
+								<option value="Irlanda">Irlanda</option>
+								<option value="Irán">Irán</option>
+								<option value="Islandia">Islandia</option>
+								<option value="Islas Salomón">Islas Salomón</option>
+								<option value="Israel">Israel</option>
+								<option value="Italia">Italia</option>
+								<option value="Jamahiriya Árabe Libia">Jamahiriya Árabe Libia</option>
+								<option value="Jamaica">Jamaica</option>
+								<option value="Japón">Japón</option>
+								<option value="Jordania">Jordania</option>
+								<option value="Kazakhstan">Kazakhstan</option>
+								<option value="Kenia">Kenia</option>
+								<option value="Kuwait">Kuwait</option>
+								<option value="Kyrgyzstan">Kyrgyzstan</option>
+								<option value="Latinoamericanistas    ">Latinoamericanistas    </option>
+								<option value="Lesoto">Lesoto</option>
+								<option value="Leste">Leste</option>
+								<option value="Letonia">Letonia</option>
+								<option value="Liberia">Liberia</option>
+								<option value="Liechtenstein">Liechtenstein</option>
+								<option value="Lituania">Lituania</option>
+								<option value="Luxemburgo">Luxemburgo</option>
+								<option value="Madagascar">Madagascar</option>
+								<option value="Malasia">Malasia</option>
+								<option value="Malaui">Malaui</option>
+								<option value="Malta">Malta</option>
+								<option value="Malí">Malí</option>
+								<option value="Mancomunidad de Dominica">Mancomunidad de Dominica</option>
+								<option value="Marruecos">Marruecos</option>
+								<option value="Mauricio">Mauricio</option>
+								<option value="Mauritania">Mauritania</option>
+								<option value="Moldavia">Moldavia</option>
+								<option value="Monaco">Monaco</option>
+								<option value="Mongolia">Mongolia</option>
+								<option value="Montenegro">Montenegro</option>
+								<option value="Mozambique">Mozambique</option>
+								<option value="Myanmar">Myanmar</option>
+								<option value="México">México</option>
+								<option value="Namibia">Namibia</option>
+								<option value="Nepal">Nepal</option>
+								<option value="Nicaragua">Nicaragua</option>
+								<option value="Nigeria">Nigeria</option>
+								<option value="No se conoce">No se conoce</option>
+								<option value="Noruega">Noruega</option>
+								<option value="Nueva Zelanda">Nueva Zelanda</option>
+								<option value="Níger">Níger</option>
+								<option value="Organismo Internacional">Organismo Internacional</option>
+								<option value="Pakistán">Pakistán</option>
+								<option value="Palestina">Palestina</option>
+								<option value="Panamá">Panamá</option>
+								<option value="Papua Nueva Guinea">Papua Nueva Guinea</option>
+								<option value="Paraguay">Paraguay</option>
+								<option value="Países Bajos - Antillas Neerlandesas">Países Bajos - Antillas Neerlandesas</option>
+								<option value="Países bajos">Países bajos</option>
+								<option value="Perú">Perú</option>
+								<option value="Polonia">Polonia</option>
+								<option value="Portugal">Portugal</option>
+								<option value="Puerto Rico">Puerto Rico</option>
+								<option value="Qatar">Qatar</option>
+								<option value="Reino Unido">Reino Unido</option>
+								<option value="República Centroafricana">República Centroafricana</option>
+								<option value="República Checa">República Checa</option>
+								<option value="República Cooperativa de Guyana">República Cooperativa de Guyana</option>
+								<option value="República Democrática Popular Lao">República Democrática Popular Lao</option>
+								<option value="República Democrática de Santo Tomé y Príncipe">República Democrática de Santo Tomé y Príncipe</option>
+								<option value="República Dominicana">República Dominicana</option>
+								<option value="República de Azerbaiján">República de Azerbaiján</option>
+								<option value="República de Benín">República de Benín</option>
+								<option value="República de Guinea Ecuatorial">República de Guinea Ecuatorial</option>
+								<option value="República de Kosovo">República de Kosovo</option>
+								<option value="República de Libano">República de Libano</option>
+								<option value="República de Macedonia">República de Macedonia</option>
+								<option value="República de Maldivas">República de Maldivas</option>
+								<option value="República de Malta">República de Malta</option>
+								<option value="República de Serbia">República de Serbia</option>
+								<option value="Ruanda">Ruanda</option>
+								<option value="Rumania">Rumania</option>
+								<option value="Rusia">Rusia</option>
+								<option value="Saint Kitts y Nevis">Saint Kitts y Nevis</option>
+								<option value="Samoa">Samoa</option>
+								<option value="San Marino">San Marino</option>
+								<option value="Senegal">Senegal</option>
+								<option value="Sierra Leona">Sierra Leona</option>
+								<option value="Singapur">Singapur</option>
+								<option value="Siria">Siria</option>
+								<option value="Somalia">Somalia</option>
+								<option value="Sri Lanka">Sri Lanka</option>
+								<option value="Suazilandia">Suazilandia</option>
+								<option value="Sudan">Sudan</option>
+								<option value="Sudáfrica">Sudáfrica</option>
+								<option value="Suecia">Suecia</option>
+								<option value="Suiza">Suiza</option>
+								<option value="Sultanato de Omán">Sultanato de Omán</option>
+								<option value="Surinam">Surinam</option>
+								<option value="Tailandia">Tailandia</option>
+								<option value="Taiwan">Taiwan</option>
+								<option value="Tajikistan">Tajikistan</option>
+								<option value="Tanzania">Tanzania</option>
+								<option value="Timor oriental">Timor oriental</option>
+								<option value="Togo">Togo</option>
+								<option value="Tonga">Tonga</option>
+								<option value="Trinidad y Tobago">Trinidad y Tobago</option>
+								<option value="Turkmenistan">Turkmenistan</option>
+								<option value="Turquía">Turquía</option>
+								<option value="Túnez">Túnez</option>
+								<option value="Ucrania">Ucrania</option>
+								<option value="Uganda">Uganda</option>
+								<option value="Unión de las Comoras">Unión de las Comoras</option>
+								<option value="Uruguay">Uruguay</option>
+								<option value="Uzbekistán">Uzbekistán</option>
+								<option value="Venezuela">Venezuela</option>
+								<option value="Vietnam">Vietnam</option>
+								<option value="Yemen">Yemen</option>
+								<option value="Yugoslavia">Yugoslavia</option>
+								<option value="Zambia">Zambia</option>
+								<option value="Zimbabue">Zimbabue</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Órgano de expresión </label>
+							<small id="passwordHelpBlock" class="form-text text-muted">Únicamente para revistas pertenecientes a sociedades científicas</small>
+							<input name="organoExpresion" class="form-control" type="text" placeholder="" >
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">ISSN (impreso) </label>
+							<input id="issn" name="issnImpreso" class="form-control" type="text" placeholder="xxxx-xxxx" >
+							<div id="invalid-issn" class="invalid-feedback">
+								Dato incorrecto por favor verifica tu ISSN ej. 1234-587X
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">ISSN-e (electrónico) </label>
+							<input id="issnE" name="issnElectronico" class="form-control" type="text" placeholder="xxxx-xxxx" >
+							<div id="invalid-issnE" class="invalid-feedback">
+								Dato incorrecto por favor verifica tu ISSN ej. 1234-587X
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Acceso <span style="color: #d93025;">*</span></label>
+							<select name="acceso" class="custom-select" id="select-acceso" required>
+								<option value="">Eliga una opción...</option>
+								<option value="Gratuito">Gratuito</option>
+								<option value="Gratuito después de un embargo">Gratuito después de un embargo</option>
+								<option value="Restringido a suscriptores">Restringido a suscriptores</option>
+								<option value="Gratuito online - suscripción versión impresa">Gratuito online - suscripción versión impresa</option>
+								<option value="Hibrido">Hibrido</option>
+							</select>
+							<div class="invalid-feedback">
+								Eliga una opción.
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">En el caso de que la revista presente embargo, ¿cuantos meses de embargo tiene?</label>
+							<input name="mesesEmbargo" type="number" class="form-control" type="text" placeholder="" >
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Categoría de la revista <span style="color: #d93025;">*</span></label>
+							<select name="categoriaRevista" class="custom-select" id="select-categoria" required>
+								<option value="">Eliga una opción...</option>
+								<option value="Ciencias sociales">Ciencias sociales</option>
+								<option value="Humanidades">Humanidades</option>
+								<option value="Ciencias de la vida">Ciencias de la vida</option>
+								<option value="Ciencias de la salud">Ciencias de la salud</option>
+								<option value="CArtes plásticas y escénicas">Artes plásticas y escénicas</option>
+								<option value="Ingeniería">Ingeniería</option>
+								<option value="Ciencias experimentales">Ciencias experimentales</option>
+								<option value="Matemáticas y ciencias físicas">Matemáticas y ciencias físicas</option>
+							</select>
+							<div class="invalid-feedback">
+								Eliga una opción.
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">¿La revista menciona específicamente quien es el titular de los derechos de explotación de los contenidos?<span style="color: #d93025;">*</label>
+								<select name="derechosExplotacion" class="custom-select" id="inputGroupSelect01" required>
+									<option value="">Eliga una opción...</option>
+									<option value="Si">Si</option>
+									<option value="No">No</option>
+								</select>
+						</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Indique quién es el titular de los derechos de explotación de los contenidos de la revista (copyright) <span style="color: #d93025;">*</span></label>
+								<small id="passwordHelpBlock" class="form-text text-muted">Dentro de la opción Institución se incluye la institución editora, el editor y/o la revista</small>
+								<select name="titularDerechos" class="custom-select" id="select-titular" required>
+									<option value="">Eliga una opción...</option>
+									<option value="Autor">Autor</option>
+									<option value="Institución">Institución</option>
+								</select>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Ubicación de la mención de derechos:</label>
+									<select name="ubicacionMencionDerechos" class="custom-select" id="inputGroupSelect01">
+										<option selected>Eliga una opción...</option>
+										<option value="Página de inicio">Página de inicio</option>
+										<option value="Enlace especifico">Enlace especifico</option>
+										<option value="Instrucciones para los autores">Instrucciones para los autores</option>
+										<option value="En las páginas de créditos">En las páginas de créditos</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Introduzca el URL que dirija directamente al apartado donde se precisa dicho dato.</label>
+									<input name="urlMencionDerechos" class="form-control" type="url" placeholder="http://www.ejemplo.com" >
+									<div class="invalid-feedback">
+										URL no valida.
+									</div>
+								</div>
+								<div class="form-group" id="opcion-tipoLicencia">
+									<div id="opcion-otroLic">
+									<label for="exampleInputPassword1">Indique el licenciamiento bajo el cual publica los contenidos<span style="color: #d93025;">*</span></label>
+									<select id="licenciaPublicacion" name="licenciaPublicacion" class="custom-select" id="select-licencia" required>
+										<option value="">Eliga una opción...</option>
+										<option value="Atribución - CC BY">Atribución - CC BY</option>
+										<option value="Atribución-No Comercial - CC BY-NC">Atribución-No Comercial - CC BY-NC</option>
+										<option value="Atribución-Compartir Igual - CC BY-SA">Atribución-Compartir Igual - CC BY-SA</option>
+										<option value="Atribución-Sin Derivadas - CC BY-ND">Atribución-Sin Derivadas - CC BY-ND</option>
+										<option value="Atribución-No Comercial-Compartir Igual - CC BY-NC-SA">Atribución-No Comercial-Compartir Igual - CC BY-NC-SA</option>
+										<option value="Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND">Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND</option>
+										<option value="Ninguna">Ninguna</option>
+										<option value="Otro">Otro</option>
+									</select>
+									</div>
+									<div id="opcion-otroLic">
+									<label id="label-describeLic" for="exampleInputPassword1" style="display: none;">Escribe otra opción.</label>
+									<br>
+									<input id="licenciaPublicacionOtro" name="licenciaPublicacionOtro" class="form-control" type="text" placeholder="" style="display: none;">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Introduzca el URL que dirija directamente al apartado donde se precisa el tipo de licencia.</label>
+									<input name="urlTipoPublicacion" class="form-control" type="url" placeholder="http://www.ejemplo.com" >
+									<div class="invalid-feedback">
+										URL no valida.
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Introduzca el URL que dirija directamente al apartado de instrucciones para los autores. <span style="color: #d93025;">*</span></label>
+									<input name="urlInstruccionAutor" class="form-control" type="url" placeholder="http://www.ejemplo.com" required>
+									<div class="invalid-feedback">
+										URL no valida.
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">¿Permite el auto-archivo? <span style="color: #d93025;">*</span></label>
+									<select name="licenciaContenido" class="custom-select" id="inputGroupSelect01" required="">
+										<option value="">Eliga una opción...</option>
+										<option value="Sí">Sí</option>
+										<option value="Sí en artículos OA de pago por publicación">Sí en artículos OA de pago por publicación</option>
+										<option value="No">No</option>
+										<option value="No se menciona">No se menciona</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Versión auto-archivo:</label>
+									<div class="custom-control custom-radio">
+										<input name="versionAutoarchivo" type="checkbox" id="customRadio21" name="customRadio" class="custom-control-input">
+										<label class="custom-control-label" for="customRadio21">Pre-print (versión sin evaluar ), Post-print (versión editorial)</label>
+									</div>
+									<div class="custom-control custom-radio">
+										<input name="versionAutoarchivo1" type="checkbox" id="customRadio22" name="customRadio" class="custom-control-input">
+										<label class="custom-control-label" for="customRadio22">Post-print (versión editorial)</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Si permite el autoarchivo o deposito de los trabajos ¿Cuándo puede realizarse?</label>
+									<select name="autoarchivoMomento" class="custom-select" id="inputGroupSelect01">
+										<option value="">Eliga una opción...</option>
+										<option value="Al envío">Al envío</option>
+										<option value="A la aceptación del trabajo">A la aceptación del trabajo</option>
+										<option value="En el momento de la publicación">En el momento de la publicación</option>
+										<option value="Después de un periodo de embargo">Después de un periodo de embargo</option>
+									</select>
+								</div>
+								<div class="form-group" id="opcion-autoarchivo">
+									<div id="opcion-otro">
+									<label for="exampleInputPassword1">¿En donde permite el autoarchivo?</label>
+									<select id="ubicacionAutoarchivo" name="ubicacionAutoarchivo" class="custom-select" id="inputGroupSelect01">
+										<option value="">Eliga una opción...</option>
+										<option value="Web personal">Web personal</option>
+										<option value="Repositorio institucional">Repositorio institucional</option>
+										<option value="Repositorio temático">Repositorio temático</option>
+										<option value="Otros">Otros</option>
+									</select>
+									</div>
+									<div id="opcion-otro">
+									<label id="label-describe" for="exampleInputPassword1" style="display: none;">Escribe otra opción.</label>
+									<input id="ubicacionAutoarchivoOtro" name="ubicacionAutoarchivoOtro" class="form-control" type="text" placeholder="" style="display: none;">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Color ROMEO <span style="color: #d93025;">*</span></label>
+									<select name="colorRomeo" class='form-control' id="inputGroupSelect01" required>
+										<option value="">Eliga una opción...</option>
+										<option value="Blanco">Blanco</option>
+										<option value="Amarillo">Amarillo</option>
+										<option value="Azul">Azul</option>
+										<option value="Verde">Verde</option>
+										<option value="Desconocido">Desconocido</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Indizaciones</label>
+									<small id="passwordHelpBlock" class="form-text text-muted">Favor de sólo escribir las siglas separadas por una coma.</small>
+									<input name="indizaciones" class="form-control" type="text" placeholder="Revista" >
+								</div>
+							</div>
+
+								<div style="background: rgb(139, 188, 2); color: white; display: flex; justify-content: center; align-items: center; height: 50px; border-radius: 5px;">Datos del contacto</div>
+								<br>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Nombre y cargo del responsable <span style="color: #d93025;">*</span></label>
+									<input name="nombreCargoUsu" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre" required>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Teléfono de contacto <span style="color: #d93025;">*</span></label>
+									<input name="telefonoUsu" type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Teléfono" required>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Correo electrónico <span style="color: #d93025;">*</span></label>
+									<input name="emailUsu" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electrónico" required>
+								</div>
+								<button type="submit" class="btn btn-primary">Enviar</button>
+							</form>
+						</div>
+
+						<!--Formulario en ingles-->
+						<div id="formularioEN" style="width: 80%; margin: 0 auto;" >
+						<h1 style="text-align: center;">Aura Registration Form</h1>
+						<p style="text-align: justify;">In AURA, AmeliCA aims to reflect the general state of scholarly journals concerning open access policies and exploitation rights of scholarly publishing. AURA’s goal is to know publishing policies of scholarly journals concerning access to their files, exploitation rights and publishing licenses, and how they affect self-archive in institutional or thematic repositories. Journals are classified by colours in accordance with DULCINEA’s and SHERPA/ROMEO’s taxonomy.</p>
+						<p>**NOTE: you need a Gmail account to fill in this form.</p>
+						<p style="color: red;">*Obligatorio</p>
+
+						<form class="needs-validation1" novalidate method="post" action="guardarDatos.php">
+						  <!--<div class="form-group">
+						    <label for="exampleInputEmail1">Dirección de correo electrónico <span style="color: #d93025;">*</span></label>
+						    <input type="email" class="form-control" id="validationCustom03" aria-describedby="emailHelp" placeholder="Enter email" required>
+						    <div class="invalid-feedback">
+						    	Por favor ingrese un correo valido.
+						    </div>
+						</div>-->
+						<div style="background: rgb(139, 188, 2); color: white; display: flex; justify-content: center; align-items: center; height: 50px; border-radius: 5px;">Journal’s information</div>
+						<br>
+						<div class="form-group">
+							<label for="nombreRevista">Journal’s full name <span style="color: #d93025;">*</span></label>
+							<input 	name="nombreRevista" class="form-control" type="text" placeholder="" required>
+							<!--<div class="invalid-feedback">
+								Por favor ingrese un dato valido.
+							</div>-->
+						</div>
+						<div class="form-group">
+							<label for="urlRevista">Journal’s URL <span style="color: #d93025;">*</span></label>
+							<input name="urlRevista" class="form-control" type="url" placeholder="http://www.example.com" required>
+							<!--<div class="invalid-feedback">
+								Por favor ingrese un dato valido.
+							</div>-->
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Publishing Institution’s full name <span style="color: #d93025;">*</span></label>
+							<input name="institucion" class="form-control" type="text" placeholder="" required>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Type of publisher <span style="color: #d93025;">*</span></label>
+							<select name="tipoEditorial" class="custom-select" id="tipo-editorial" required>
+								<option value="">Choose...</option>
+								<option value="Universidad/Centro de Investigación">University/Research Center</option>
+								<option value="Commercial">Comercial</option>
+								<option value="Asociación/Sociedad">Association/Society</option>
+								<option value="Museo">Museum</option>
+								<option value="Fundación">Foundation</option>
+								<option value="Colegio Profesional">Professional Association</option>
+								<option value="Real Academia">Royal Academy</option>
+								<option value="Gubernamental">Governmental</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="pais">Pais<span style="color: #d93025;">*</span></label>
+							<select name="pais" class="custom-select" id="pais" required>
+								<option value="">Eliga un opción...</option>
+								<option value="Afganistán">Afganistán</option>
+								<option value="Alabania">Alabania</option>
+								<option value="Alemania">Alemania</option>
+								<option value="Andorra">Andorra</option>
+								<option value="Angola">Angola</option>
+								<option value="Antigua y Barbuda">Antigua y Barbuda</option>
+								<option value="Antártida">Antártida</option>
+								<option value="Arabia Saudita">Arabia Saudita</option>
+								<option value="Argelia">Argelia</option>
+								<option value="Argentina">Argentina</option>
+								<option value="Armenia">Armenia</option>
+								<option value="Australia">Australia</option>
+								<option value="Austria">Austria</option>
+								<option value="Azerbaiyán">Azerbaiyán</option>
+								<option value="Bahamas">Bahamas</option>
+								<option value="Bahréin">Bahréin</option>
+								<option value="Bangladesh">Bangladesh</option>
+								<option value="Barbados">Barbados</option>
+								<option value="Belice">Belice</option>
+								<option value="Benín">Benín</option>
+								<option value="Bielorrusia">Bielorrusia</option>
+								<option value="Birmania">Birmania</option>
+								<option value="Bolivia">Bolivia</option>
+								<option value="Bosnia y Herzegovina">Bosnia y Herzegovina</option>
+								<option value="Botswana">Botswana</option>
+								<option value="Brasil">Brasil</option>
+								<option value="Brunei Darussalam">Brunei Darussalam</option>
+								<option value="Bulgaria">Bulgaria</option>
+								<option value="Burkina Faso">Burkina Faso</option>
+								<option value="Burundi">Burundi</option>
+								<option value="Bután">Bután</option>
+								<option value="Bélgica">Bélgica</option>
+								<option value="Cabo Verde">Cabo Verde</option>
+								<option value="Camboya">Camboya</option>
+								<option value="Camerún">Camerún</option>
+								<option value="Canadá">Canadá</option>
+								<option value="Chad-">Chad-</option>
+								<option value="Chile">Chile</option>
+								<option value="China">China</option>
+								<option value="Chipre">Chipre</option>
+								<option value="Ciudad estado del vaticano">Ciudad estado del vaticano</option>
+								<option value="Colombia">Colombia</option>
+								<option value="Congo">Congo</option>
+								<option value="Corea">Corea</option>
+								<option value="Corea del Sur">Corea del Sur</option>
+								<option value="Costa Rica">Costa Rica</option>
+								<option value="Costa de Marfil">Costa de Marfil</option>
+								<option value="Croacia">Croacia</option>
+								<option value="Cuba">Cuba</option>
+								<option value="Côte d'Ivoire">Côte d'Ivoire</option>
+								<option value="Dinamarca">Dinamarca</option>
+								<option value="Ecuador">Ecuador</option>
+								<option value="Egipto">Egipto</option>
+								<option value="El Salvador">El Salvador</option>
+								<option value="Emiratos Árabes Unidos">Emiratos Árabes Unidos</option>
+								<option value="Eritrea">Eritrea</option>
+								<option value="Escocia">Escocia</option>
+								<option value="Eslovaquia">Eslovaquia</option>
+								<option value="Eslovenia">Eslovenia</option>
+								<option value="España">España</option>
+								<option value="Estados Federados de Micronesia">Estados Federados de Micronesia</option>
+								<option value="Estados Unidos">Estados Unidos</option>
+								<option value="Estonia">Estonia</option>
+								<option value="Etiopía">Etiopía</option>
+								<option value="Federación de las Indias Occidentales">Federación de las Indias Occidentales</option>
+								<option value="Fiji">Fiji</option>
+								<option value="Filipinas">Filipinas</option>
+								<option value="Finlandia">Finlandia</option>
+								<option value="Francia">Francia</option>
+								<option value="Gabón">Gabón</option>
+								<option value="Gales">Gales</option>
+								<option value="Gambia">Gambia</option>
+								<option value="Georgia">Georgia</option>
+								<option value="Ghana">Ghana</option>
+								<option value="Gibraltar">Gibraltar</option>
+								<option value="Granada">Granada</option>
+								<option value="Grecia">Grecia</option>
+								<option value="Groenlandia">Groenlandia</option>
+								<option value="Guatemala">Guatemala</option>
+								<option value="Guayana">Guayana</option>
+								<option value="Guinea">Guinea</option>
+								<option value="Guinea-Bissau">Guinea-Bissau</option>
+								<option value="Haití">Haití</option>
+								<option value="Holanda">Holanda</option>
+								<option value="Honduras">Honduras</option>
+								<option value="Hong Kong">Hong Kong</option>
+								<option value="Hungría">Hungría</option>
+								<option value="India">India</option>
+								<option value="Indonesia">Indonesia</option>
+								<option value="Irak">Irak</option>
+								<option value="Irlanda">Irlanda</option>
+								<option value="Irán">Irán</option>
+								<option value="Islandia">Islandia</option>
+								<option value="Islas Salomón">Islas Salomón</option>
+								<option value="Israel">Israel</option>
+								<option value="Italia">Italia</option>
+								<option value="Jamahiriya Árabe Libia">Jamahiriya Árabe Libia</option>
+								<option value="Jamaica">Jamaica</option>
+								<option value="Japón">Japón</option>
+								<option value="Jordania">Jordania</option>
+								<option value="Kazakhstan">Kazakhstan</option>
+								<option value="Kenia">Kenia</option>
+								<option value="Kuwait">Kuwait</option>
+								<option value="Kyrgyzstan">Kyrgyzstan</option>
+								<option value="Latinoamericanistas    ">Latinoamericanistas    </option>
+								<option value="Lesoto">Lesoto</option>
+								<option value="Leste">Leste</option>
+								<option value="Letonia">Letonia</option>
+								<option value="Liberia">Liberia</option>
+								<option value="Liechtenstein">Liechtenstein</option>
+								<option value="Lituania">Lituania</option>
+								<option value="Luxemburgo">Luxemburgo</option>
+								<option value="Madagascar">Madagascar</option>
+								<option value="Malasia">Malasia</option>
+								<option value="Malaui">Malaui</option>
+								<option value="Malta">Malta</option>
+								<option value="Malí">Malí</option>
+								<option value="Mancomunidad de Dominica">Mancomunidad de Dominica</option>
+								<option value="Marruecos">Marruecos</option>
+								<option value="Mauricio">Mauricio</option>
+								<option value="Mauritania">Mauritania</option>
+								<option value="Moldavia">Moldavia</option>
+								<option value="Monaco">Monaco</option>
+								<option value="Mongolia">Mongolia</option>
+								<option value="Montenegro">Montenegro</option>
+								<option value="Mozambique">Mozambique</option>
+								<option value="Myanmar">Myanmar</option>
+								<option value="México">México</option>
+								<option value="Namibia">Namibia</option>
+								<option value="Nepal">Nepal</option>
+								<option value="Nicaragua">Nicaragua</option>
+								<option value="Nigeria">Nigeria</option>
+								<option value="No se conoce">No se conoce</option>
+								<option value="Noruega">Noruega</option>
+								<option value="Nueva Zelanda">Nueva Zelanda</option>
+								<option value="Níger">Níger</option>
+								<option value="Organismo Internacional">Organismo Internacional</option>
+								<option value="Pakistán">Pakistán</option>
+								<option value="Palestina">Palestina</option>
+								<option value="Panamá">Panamá</option>
+								<option value="Papua Nueva Guinea">Papua Nueva Guinea</option>
+								<option value="Paraguay">Paraguay</option>
+								<option value="Países Bajos - Antillas Neerlandesas">Países Bajos - Antillas Neerlandesas</option>
+								<option value="Países bajos">Países bajos</option>
+								<option value="Perú">Perú</option>
+								<option value="Polonia">Polonia</option>
+								<option value="Portugal">Portugal</option>
+								<option value="Puerto Rico">Puerto Rico</option>
+								<option value="Qatar">Qatar</option>
+								<option value="Reino Unido">Reino Unido</option>
+								<option value="República Centroafricana">República Centroafricana</option>
+								<option value="República Checa">República Checa</option>
+								<option value="República Cooperativa de Guyana">República Cooperativa de Guyana</option>
+								<option value="República Democrática Popular Lao">República Democrática Popular Lao</option>
+								<option value="República Democrática de Santo Tomé y Príncipe">República Democrática de Santo Tomé y Príncipe</option>
+								<option value="República Dominicana">República Dominicana</option>
+								<option value="República de Azerbaiján">República de Azerbaiján</option>
+								<option value="República de Benín">República de Benín</option>
+								<option value="República de Guinea Ecuatorial">República de Guinea Ecuatorial</option>
+								<option value="República de Kosovo">República de Kosovo</option>
+								<option value="República de Libano">República de Libano</option>
+								<option value="República de Macedonia">República de Macedonia</option>
+								<option value="República de Maldivas">República de Maldivas</option>
+								<option value="República de Malta">República de Malta</option>
+								<option value="República de Serbia">República de Serbia</option>
+								<option value="Ruanda">Ruanda</option>
+								<option value="Rumania">Rumania</option>
+								<option value="Rusia">Rusia</option>
+								<option value="Saint Kitts y Nevis">Saint Kitts y Nevis</option>
+								<option value="Samoa">Samoa</option>
+								<option value="San Marino">San Marino</option>
+								<option value="Senegal">Senegal</option>
+								<option value="Sierra Leona">Sierra Leona</option>
+								<option value="Singapur">Singapur</option>
+								<option value="Siria">Siria</option>
+								<option value="Somalia">Somalia</option>
+								<option value="Sri Lanka">Sri Lanka</option>
+								<option value="Suazilandia">Suazilandia</option>
+								<option value="Sudan">Sudan</option>
+								<option value="Sudáfrica">Sudáfrica</option>
+								<option value="Suecia">Suecia</option>
+								<option value="Suiza">Suiza</option>
+								<option value="Sultanato de Omán">Sultanato de Omán</option>
+								<option value="Surinam">Surinam</option>
+								<option value="Tailandia">Tailandia</option>
+								<option value="Taiwan">Taiwan</option>
+								<option value="Tajikistan">Tajikistan</option>
+								<option value="Tanzania">Tanzania</option>
+								<option value="Timor oriental">Timor oriental</option>
+								<option value="Togo">Togo</option>
+								<option value="Tonga">Tonga</option>
+								<option value="Trinidad y Tobago">Trinidad y Tobago</option>
+								<option value="Turkmenistan">Turkmenistan</option>
+								<option value="Turquía">Turquía</option>
+								<option value="Túnez">Túnez</option>
+								<option value="Ucrania">Ucrania</option>
+								<option value="Uganda">Uganda</option>
+								<option value="Unión de las Comoras">Unión de las Comoras</option>
+								<option value="Uruguay">Uruguay</option>
+								<option value="Uzbekistán">Uzbekistán</option>
+								<option value="Venezuela">Venezuela</option>
+								<option value="Vietnam">Vietnam</option>
+								<option value="Yemen">Yemen</option>
+								<option value="Yugoslavia">Yugoslavia</option>
+								<option value="Zambia">Zambia</option>
+								<option value="Zimbabue">Zimbabue</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Organization</label>
+							<small id="passwordHelpBlock" class="form-text text-muted">Only for journals from learned societies</small>
+							<input name="organoExpresion" class="form-control" type="text" placeholder="" >
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">ISSN </label>
+							<input id="issn-EN" name="issnImpreso" class="form-control" type="text" placeholder="xxxx-xxxx" >
+							<div id="invalid-issn-EN" class="invalid-feedback">
+								Dato incorrecto por favor verifica tu ISSN ej. 1234-587X
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">ISSN-e</label>
+							<input id="issnE-EN" name="issnElectronico" class="form-control" type="text" placeholder="xxxx-xxxx" >
+							<div id="invalid-issnE-EN" class="invalid-feedback">
+								Dato incorrecto por favor verifica tu ISSN ej. 1234-587X
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Access <span style="color: #d93025;">*</span></label>
+							<select name="acceso" class="custom-select" id="select-acceso" required>
+								<option value="">Choose...</option>
+								<option value="Gratuito">Free</option>
+								<option value="Gratuito despues de un embargo">Free after an embargo period</option>
+								<option value="Restringido a suscriptores">Only for subscribers</option>
+								<option value="Gratuito online - suscripción versión impresa">Free online – subscription printed version</option>
+								<option value="Hibrido">Hybrid</option>
+							</select>
+							<!--<div class="invalid-feedback">
+								Eliga una opción.
+							</div>-->
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">If the journal has an embargo period, what is its length?</label>
+							<input name="mesesEmbargo" type="number" class="form-control" type="text" placeholder="" >
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Journal’s category <span style="color: #d93025;">*</span></label>
+							<select name="categoriaRevista" class="custom-select" id="select-categoria" required>
+								<option value="">Choose...</option>
+								<option value="Ciencias sociales">Social Sciences</option>
+								<option value="Humanidades">Humanities</option>
+								<option value="Ciencias de la vida">Life Sciences</option>
+								<option value="Ciencias de la salud">Health Sciences</option>
+								<option value="Artes plásticas y escénicas">Plastic and performing arts</option>
+								<option value="Ingeniería">Engineering</option>
+								<option value="Ciencias experimentales">Experimental Sciences</option>
+								<option value="Matemáticas y ciencias físicas">Mathematics and Physics</option>
+							</select>
+							<!--<div class="invalid-feedback">
+								Eliga una opción.
+							</div>-->
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Is the holder of exploitation rights of contents specifically mentioned in the journal?<span style="color: #d93025;">*</label>
+								<select name="derechosExplotacion" class="custom-select" id="inputGroupSelect01" required>
+									<option value="">Choose...</option>
+									<option value="Si">Yes</option>
+									<option value="No">No</option>
+								</select>
+						</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Choose who holds the exploitation rights of the journal’s contents (copyright) <span style="color: #d93025;">*</span></label>
+								<small id="passwordHelpBlock" class="form-text text-muted">n institution option the publishing institution, editor and/or journal are included</small>
+								<select name="titularDerechos" class="custom-select" id="select-titular" required>
+									<option value="">Choose...</option>
+									<option value="Autor">Author</option>
+									<option value="Institución">Institution</option>
+								</select>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Rights are mentioned in…</label>
+									<select name="ubicacionMencionDerechos" class="custom-select" id="inputGroupSelect01">
+										<option selected>Choose...</option>
+										<option value="Página de inicio">Home page</option>
+										<option value="Enlace especifico">Specific link</option>
+										<option value="Instrucciones para los autores">Authors’ guidelines</option>
+										<option value="En las páginas de créditos">Copyright page</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Provide the link to such section</label>
+									<input name="urlMencionDerechos" class="form-control" type="url" placeholder="http://www.example.com" >
+									<!--<div class="invalid-feedback">
+										URL no valida.
+									</div>-->
+								</div>
+								<div class="form-group" id="opcion-tipoLicenciaEN">
+									<div id="opcion-otroLicEN">
+									<label for="exampleInputPassword1">Choose the license used to publish contents<span style="color: #d93025;">*</span></label>
+									<select id="licenciaPublicacionEN" name="licenciaPublicacion" class="custom-select" id="select-licencia" required>
+										<option value="">Choose...</option>
+										<option value="Atribución - CC BY">Attribution CC BY</option>
+										<option value="Atribución-No Comercial - CC BY-NC">Attribution-Noncommercial CC BY-NC</option>
+										<option value="Atribución-Compartir Igual - CC BY-SA">Attribution-ShareAlike CC BY-SA</option>
+										<option value="Atribución-Sin Derivadas - CC BY-ND">Attribution-NoDerivs CC BY-ND</option>
+										<option value="Atribución-No Comercial-Compartir Igual - CC BY-NC-SA">Attribution-Noncommercial-ShareAlike CC BY-NC-SA</option>
+										<option value="Atribución-No Comercial-Sin Derivadas - CC BY-NC-ND">Attribution-Noncommercial-NoDerivs CC BY-NC-ND</option>
+										<option value="Ninguna">None</option>
+										<option value="Otro">Other:</option>
+									</select>
+									</div>
+									<div id="opcion-otroLicEN">
+									<label id="label-describeLicEN" for="exampleInputPassword1" style="display: none;">Another option.</label>
+									<input id="licenciaPublicacionOtroEN" name="licenciaPublicacionOtro" class="form-control" type="text" placeholder="" style="display: none;">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">URL to the section where license is indicated.</label>
+									<input name="urlTipoPublicacion" class="form-control" type="url" placeholder="http://www.example.com" >
+									<!--<div class="invalid-feedback">
+										URL no valida.
+									</div>-->
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">URL to the authors’ guidelines section. <span style="color: #d93025;">*</span></label>
+									<input name="urlInstruccionAutor" class="form-control" type="url" placeholder="http://www.example.com" required>
+									<!--<div class="invalid-feedback">
+										URL no valida.
+									</div>-->
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Is self-archive permitted? <span style="color: #d93025;">*</span></label>
+									<select name="licenciaContenido" class="custom-select" id="inputGroupSelect01" required="">
+										<option value="">Choose...</option>
+										<option value="Sí">Yes</option>
+										<option value="Sí en artículos OA de pago por publicación">Yes, in OA pay-for-publishing articles</option>
+										<option value="No">No</option>
+										<option value="No se menciona">No. it’s not mentioned</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Self-archive version:</label>
+									<div class="custom-control custom-radio">
+										<input name="versionAutoarchivo" type="checkbox" id="customRadioversion" name="customRadio" class="custom-control-input" value="Pre-print (versión sin evaluar ), Post-print (versión editorial)">
+										<label class="custom-control-label" for="customRadioversion">Pre-print (without assessment), Post-print (publisher’s version)</label>
+									</div>
+									<div class="custom-control custom-radio">
+										<input name="versionAutoarchivo1" type="checkbox" id="customRadioversion1" name="customRadio" class="custom-control-input" value="Post-print (versión editorial)">
+										<label class="custom-control-label" for="customRadioversion1">Post-print (publisher’s version)</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">If self-archive is permitted, when could it be done?</label>
+									<select name="autoarchivoMomento" class="custom-select" id="inputGroupSelect01">
+										<option value="">Choose...</option>
+										<option value="Al envío">When the work is sent</option>
+										<option value="A la aceptación del trabajo">When the work is accepted</option>
+										<option value="En el momento de la publicación">When the work is published</option>
+										<option value="Después de un periodo de embargo">After an embargo period</option>
+									</select>
+								</div>
+								<div class="form-group" id="opcion-autoarchivoEN">
+									<div id="opcion-otroEN">
+									<label for="exampleInputPassword1">Where is self-archive permitted?</label>
+									<select id="ubicacionAutoarchivoEN" name="ubicacionAutoarchivo" class="custom-select" id="inputGroupSelect01">
+										<option value="">Eliga una opción...</option>
+										<option value="Web personal">Author’s personal website</option>
+										<option value="Repositorio institucional">Institutional repository</option>
+										<option value="Repositorio temático">Subject repository</option>
+										<option value="Otros">Other</option>
+									</select>
+									</div>
+									<div id="opcion-otroEN">
+									<label id="label-describeEN" for="exampleInputPassword1" style="display: none;">Another option.</label>
+									<input id="ubicacionAutoarchivoOtroEN" name="ubicacionAutoarchivoOtro" class="form-control" type="text" placeholder="" style="display: none;">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">ROMEO color <span style="color: #d93025;">*</span></label>
+									<select name="colorRomeo" class='form-control' id="inputGroupSelect01" required>
+										<option value="">Choose...</option>
+										<option value="Blanco">White</option>
+										<option value="Amarillo">Yellow</option>
+										<option value="Azul">Blue</option>
+										<option value="Verde">Green</option>
+										<option value="Desconocido">Unknown</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Indexing</label>
+									<small id="passwordHelpBlock" class="form-text text-muted">Please only type acronyms and separate them with a comma.</small>
+									<input name="indizaciones" class="form-control" type="text" placeholder="" >
+								</div>
+								<div style="background: rgb(139, 188, 2); color: white; display: flex; justify-content: center; align-items: center; height: 50px; border-radius: 5px;">Contact Information </div>
+								<br>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Name and position <span style="color: #d93025;">*</span></label>
+									<input name="nombreCargoUsu" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Telephone number <span style="color: #d93025;">*</span></label>
+									<input name="telefonoUsu" type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1">Email <span style="color: #d93025;">*</span></label>
+									<input name="emailUsu" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email" required>
+								</div>
+								<button type="submit" class="btn btn-primary">Enviar</button>
+							</form>
+						</div>
+						<!--Formulario en ingles-->
+
+					</div>
+
+
+
+
+	<script>
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function() {
+		'use strict';
+		window.addEventListener('load', function() {
+	    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+	    var forms = document.getElementsByClassName('needs-validation1');
+	    // Loop over them and prevent submission
+	    var validation = Array.prototype.filter.call(forms, function(form) {
+	    	form.addEventListener('submit', function(event) {
+	    		if (form.checkValidity() === false) {
+	    			event.preventDefault();
+	    			event.stopPropagation();
+	    		}
+	    		form.classList.add('was-validated');
+	    	}, false);
+	    });
+	}, false);
+	})();
+</script>
+
+<footer>
+			<div id="pre-prePie" ng-if="idioma === 'es'">
+				<div class="icon-pre-pre">
+					<a href="https://portal.amelica.org/index.oa">
+						<img alt="" src="resources/media/proyectos-02-contenido.png" title="Portal de libros y revistas">
+						<p>Portal de libros y revistas</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://portal.amelica.org/ameli/">
+						<img alt="" src="resources/media/proyectos-03-xml.png" title="Ameli XML">
+						<p>AmeliCA XML</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://ojs.amelica.org">
+						<img alt="" src="resources/media/proyectos-04-ojs.png" title="Comunidad OJS">
+						<p>Comunidad OJS: usuarios y desarrolladores</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://www.amelica.org/proyectos/metricas.html">
+						<img alt="" src="resources/media/proyectos-05-metricas.png" title="M&eacute;tricas responsables">
+						<p>M&eacute;tricas Responsables</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://www.amelica.org/proyectos/profesionalizacion.html">
+						<img alt="" src="resources/media/proyectos-06-profesionalizacion.png" title="Profesionalizaci&oacute;n editorial">
+						<p>Profesionalizaci&oacute;n Editorial</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://www.amelica.org/proyectos/ciencia.html">
+						<img alt="" src="resources/media/proyectos-07-ciencia.png" title="Ciencia abierta">
+						<p>Ciencia Abierta</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://aura.amelica.org">
+						<img alt="" src="resources/media/proyectos-08-aura.png" title="Propiedad intelectual">
+						<p>AURA</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://www.amelica.org/index.php/index-entradas/">
+						<img alt="" src="resources/media/proyectos-09-blog.png" title="Blog">
+						<p>Blog Ameli</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://www.amelica.org/proyectos/repositorios.html">
+						<img alt="" src="resources/media/proyectos-10-repositorios.png" title="Repositorios">
+						<p>Repositorios</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://portal.amelica.org/observatorio/">
+						<img alt="" src="resources/media/proyectos-11-observatorio.png" title="Observatorio">
+						<p>Observatorio de Evaluci&oacute;n</p>
+					</a>
+				</div>
+			</div>
+
+			<div id="pre-prePie" ng-if="idioma === 'en'">
+				<div class="icon-pre-pre">
+					<a href="https://portal.amelica.org/index.oa">
+						<img alt="" src="resources/media/proyectos-02-contenido.png" title="Portal de libros y revistas">
+						<p>Book Portal and journals</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://portal.amelica.org/ameli/">
+						<img alt="" src="resources/media/proyectos-03-xml.png" title="Ameli XML">
+						<p>AmeliCA XML</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://ojs.amelica.org">
+						<img alt="" src="resources/media/proyectos-04-ojs.png" title="Comunidad OJS">
+						<p>OJS Community: Users and developers</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://www.amelica.org/proyectos/metricas.html">
+						<img alt="" src="resources/media/proyectos-05-metricas.png" title="M&eacute;tricas responsables">
+						<p>Responsible Metrics</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://www.amelica.org/proyectos/profesionalizacion.html">
+						<img alt="" src="resources/media/proyectos-06-profesionalizacion.png" title="Profesionalizaci&oacute;n editorial">
+						<p>Editorial professionalization</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://www.amelica.org/proyectos/ciencia.html">
+						<img alt="" src="resources/media/proyectos-07-ciencia.png" title="Ciencia abierta">
+						<p>Open Science</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://aura.amelica.org">
+						<img alt="" src="resources/media/proyectos-08-aura.png" title="Propiedad intelectual">
+						<p>AURA</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://www.amelica.org/index.php/index-entradas/">
+						<img alt="" src="resources/media/proyectos-09-blog.png" title="Blog">
+						<p>Blog Ameli</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://www.amelica.org/proyectos/repositorios.html">
+						<img alt="" src="resources/media/proyectos-10-repositorios.png" title="Repositorios">
+						<p>Repositories</p>
+					</a>
+				</div>
+				<div class="icon-pre-pre">
+					<a href="https://portal.amelica.org/observatorio/">
+						<img alt="" src="resources/media/proyectos-11-observatorio.png" title="Observatorio">
+						<p>Evaluation Observatory</p>
+					</a>
+				</div>
+			</div>
+	
+			<div layout="block" id="footer">
+				<div style="display: inline-block">
+					<img src="resources/media/lineaColoresFooter.png" class="lineaColores"></img>
+					
+					<div class="pre-pie-home" ng-if="idioma === 'es'">
+						<div class="content-links">
+							<div class="links-pre-pie">
+								<a target="_blank" href="https://www.amelica.org/#modeloB">El Modelo</a>
+							</div>
+							<div class="links-pre-pie">
+								<a target="_blank" href="https://www.amelica.org/index.php/principios-y-valores/">Principios y valores</a>
+							</div>
+							<div class="links-pre-pie">
+								<a target="_blank" href="https://www.amelica.org/index.php/que-es-ameli/">¿Qu&eacute; es AmeliCA?</a>
+							</div>
+							<div class="links-pre-pie">
+								<a target="_blank" href="https://www.amelica.org/index.php/sustentabilidad/">¿Cómo participar?</a>
+							</div>
+							<div class="links-pre-pie">
+								<a target="_blank" href="https://www.amelica.org/index.php/preguntas-frecuentes/">Preguntas Frecuentes</a>
+							</div>
+						</div>
+					</div>
+					<div class="pre-pie-home" ng-if="idioma === 'en'">
+						<div class="content-links">
+							<div class="links-pre-pie">
+								<a target="_blank" href="https://amelica.org/index.php/en/home/#modeloB">Our model</a>
+							</div>
+							<div class="links-pre-pie">
+								<a target="_blank" href="https://amelica.org/index.php/en/principles-and-values/">Principles and values</a>
+							</div>
+							<div class="links-pre-pie">
+								<a target="_blank" href="https://amelica.org/index.php/en/about/">About</a>
+							</div>
+							<div class="links-pre-pie">
+								<a target="_blank" href="https://amelica.org/index.php/en/organizational-chart/">Our team</a>
+							</div>
+							<div class="links-pre-pie">
+								<a target="_blank" href="https://amelica.org/index.php/en/faq/">FAQ</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="pie">
+					<!-- <div id="greca-ameli-pie"></div> -->			
+					<div id="imagen-fondo-pie">
+						<div id="texto-pie" class="texto-conocimiento" ng-if="idioma === 'es'">
+						    <p class="texto-resaltado">Conocimiento Abierto para <br/> </p>
+						    <span>sin fines de lucro</span><br>
+						    <span>propiedad de la academia </span> 
+						</div>
+						<div id="texto-pie" class="texto-conocimiento" ng-if="idioma === 'en'">
+						    <p class="texto-resaltado">Open Knowledge <br/> </p>
+						    <span>not-for-profit</span><br>
+						    <span>academy ownership</span> 
+						</div>
+						<div id="linea-cs"></div>
+						<div class="nivel">
+							<div id="logotipo-pie1" class="logotipo nivel1"><a class="enlace-pie" href="https://es.unesco.org" target="_blank"></a></div>
+							<div id="logotipo-pie2" class="logotipo nivel1"><a class="enlace-pie" href="https://www.clacso.org.ar" target="_blank"></a></div>
+							<div id="logotipo-pie3" class="logotipo nivel1"><a class="enlace-pie" href="https://www.redalyc.org" target="_blank"></a></div>
+						</div>
+						<!--<div id="linea-cs"></div>
+						<div class="nivel">
+							<div id="logotipo-pie4" class="logotipo nivel2"><a class="enlace-pie" href="http://www.uaemex.mx" target="_blank"></a></div>
+							<div id="logotipo-pie5" class="logotipo nivel2"><a class="enlace-pie" href="https://unlp.edu.ar" target="_blank"></a></div>
+							<div id="logotipo-pie6" class="logotipo nivel2"><a class="enlace-pie" href="http://www.udea.edu.co/wps/portal/udea/web/inicio/!ut/p/z1/hY7LDoIwEEW_hQXbzrSCqe4axAWiYIIRuzEQETAIpCD-vo0a48LH7GbuuScDEmKQdTKUedKXTZ1Uet_J8Z5PHEaFhT5HPkexjnzX2iwRAxu2_wCpY_wyAnVf3pGXARfU1gY3XEWBE8489gR-ODyQedWkj3dFnY54DlJlx0xlilyUPhd9305NNJFanDBqE0aYiddGHVqVdZ2Jn5pF0_UQvzWgPcd4sqvBF4ZxA-2zvhU!/dz/d5/L2dBISEvZ0FBIS9nQSEh" target="_blank"></a></div>
+						</div> -->
+					</div> 
+					<!--<div id="texto-tecnologia">
+						<div id="texto-logo"></div>
+					</di>	-->
+				</div>
+			</div>
+		</footer>
+		</body>
+		</html>

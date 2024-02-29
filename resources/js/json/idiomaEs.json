@@ -1,0 +1,100 @@
+{
+  "menu":
+  {
+    "op1":"Listado de revistas",
+    "op2":"Estadísticas",
+    "op3":"Acerca de",
+    "op4":"¿Quiere incluir su revista?"
+  },
+
+  "formulario" : 
+	{
+		"titulo"  	 : "Aura-Formulario de registro",
+		"descripcion" 	 : "AURA es el espacio desde el cual AmeliCA pretende reflejar el estado general de las revistas científicas respecto a las políticas de apertura y derechos de explotación de la publicación científica. El objetivo de AURA es conocer las políticas editoriales de las revistas científicas respecto al acceso a sus archivos, los derechos de explotación y licencias de publicación y cómo éstos pueden afectar a su posterior auto-archivo en repositorios institucionales o temáticos. Las revistas se clasifican por colores siguiendo la taxonomía de DULCINEA y SHERPA/ROMEO.",
+		"obligatorio"	  	 : "*Obligatorio"
+  },
+
+  "informacionRevistas":
+  {
+    "titulo": "Datos de la revista",
+    "nombre": "Nombre oficial completo de la revista",
+    "url": "URL del portal de la revista",
+    "pais": "Pais",
+    "nombreInstitucion": "Nombre completo de la institución editora ",
+    "otraInstitucion": "Si no encuentra la institución que busca, agregue otra institución ",
+    "nombreOtraInstitucion": "Nombre completo de otra institución editora ",
+    "tipo": "Tipo editorial ",
+    "organo": "Órgano de expresión",
+    "organoSmall": "Únicamente para revistas pertenecientes a sociedades científicas",
+    "acceso": "Acceso",
+    "mesesEmbargo": "En el caso de que la revista presente embargo, ¿cuántos meses de embargo tiene?",
+    "categoria": "Categoría de la revista",
+    "derechos": "¿La revista menciona específicamente quién es el titular de los derechos de explotación de los contenidos?",
+    "titularDerechos": "Indique quién es el titular de los derechos de explotación de los contenidos de la revista (copyright)",
+    "ubicacionDerechos": "Ubicación de la mención de derechos:",
+    "urlDerechos": "Introduzca el URL que dirija directamente al apartado donde se precisa dicho dato.",
+    "licencia": "Indique el licenciamiento bajo el cual publica los contenidos",
+    "urlLicencia": "Introduzca el URL que dirija directamente al apartado donde se precisa el tipo de licencia.",
+    "urlInstrucciones": "Introduzca el URL que dirija directamente al apartado de instrucciones para los autores.",
+    "autoarchivo": "¿Permite el auto-archivo?",
+    "versionAutoarchivo": "Versión auto-archivo:",
+    "cuandoAutoarchivo": "Si permite el autoarchivo o deposito de los trabajos ¿Cuándo puede realizarse?",
+    "dondeAutoarchivo": "¿En dónde permite el auto-archivo? ",
+    "colorRomeo": "Color ROMEO ",
+    "indizaciones": "Indizaciones",
+    "listaIndizaciones": "Lista de indizaciones seleccionadas",
+    "otros": "Escribe otra opción.",
+    "btnAgregar": "Agregar",
+    "placeRevista":"Revista",
+    "urlejemplo":"http://www.ejemplo.com",
+    "elegir":"elija una opción..."
+  },
+
+  "opciones": 
+  {
+    "prePrint": "Pre-print (versión sin evaluar), Post-print (versión editorial)",
+    "posPrint": "Post-print (versión editorial)",
+    "cuandoAutoarchivoOP1": "Al envío",
+    "cuandoAutoarchivoOP2": "A la aceptación del trabajo",
+    "cuandoAutoarchivoOP3": "En el momento de la publicación",
+    "cuandoAutoarchivoOP4": "Después de un periodo de embargo",
+    "dondeAutoarchivoOP1": "Web personal",
+    "dondeAutoarchivoOP2": "Repositorio institucional",
+    "dondeAutoarchivoOP3": "Repositorio temático",
+    "dondeAutoarchivoOP4": "Otros"
+  },
+
+  "contacto":
+  {
+    "titulo": "Datos del contacto",
+    "nombre": "Nombre del responsable",
+    "cargo": "Cargo del responsable",
+    "telefono": "Teléfono de contacto",
+    "email": "Correo electrónico"
+  },
+
+  "detalleRevista":
+  {
+    "regresar":"Regresar a la lista", 
+    "editorial":"Editorial",
+    "titularDerechos":"Titular de los derechos de explotación(copyright)",
+    "issnElectronico":"ISSN Electrónico",
+    "issnImpreso":"ISSN",
+    "issnL":"ISSN-L",
+    "urlRevista":"URL",
+    "nomCategoria":"Categoría",
+    "acceso":"Acceso",
+    "mesesEmbargo":"Embargo",
+    "derechosExplotacion":"Mención específica de derechos",
+    "ubicacionMencionDerechos":"Ubicación específica de derechos",
+    "urlMencionDerechos":"URL copyright",
+    "licenciaPublicacion":"Tipo de licencia",
+    "urlInstruccionAutor":"URL instrucciones autores",
+    "autoArchivo":"¿Permite el auto-archivo?",
+    "versionAutoarchivo":"Versión auto-archivo",
+    "autoarchivoMomento":"¿Cuándo?",
+    "ubicacionAutoarchivo":"¿Dónde?",
+    "colorRomeo":"Color ROMEO",
+    "textoIndizacion":"Indizada en"
+  }
+}
